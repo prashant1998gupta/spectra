@@ -128,7 +128,7 @@
         return; // let the click proceed to checkout
       }
       e.preventDefault();
-      showToast("Checkout opens here once the store is connected — see docs → Licensing & Payments");
+      showToast("Checkout isn't open quite yet — download the free version below in the meantime");
     });
   }
 
