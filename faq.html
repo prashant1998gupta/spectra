@@ -107,8 +107,8 @@
               <div class="faq-a">Yes — Spectra ships with a built-in <b>demo mode</b> that runs on a realistic sample disk, right in your browser view of the app. You can click through the treemap, run a pretend Smart Clean and explore every feature without touching a single real file. It's included in the free download, with nothing to sign up for.</div>
             </details>
             <details class="faq-item reveal">
-              <summary>macOS says the app "can't be opened". What do I do?</summary>
-              <div class="faq-a">That's Gatekeeper being cautious about apps downloaded outside the App Store. The fix takes ten seconds: <b>right-click (or Control-click) Spectra in Applications → Open → Open</b> in the confirmation dialog. macOS remembers your choice and never asks again. On newer macOS versions you can also approve it under <b>System Settings → Privacy &amp; Security → Open Anyway</b>. Never disable Gatekeeper globally — you don't need to.</div>
+              <summary>macOS says the app is "damaged" or "can't be opened". What do I do?</summary>
+              <div class="faq-a">That's Gatekeeper being cautious about apps downloaded outside the App Store — Spectra isn't code-signed yet, and current macOS reports unsigned downloads as <em>"damaged and can't be opened"</em> (the file is fine — the <a href="download.html#damaged">download page</a> shows how to verify its checksum). The fix takes ten seconds: after dragging Spectra into Applications, run <code>xattr -cr /Applications/Spectra.app</code> in Terminal, then open the app normally. On older macOS versions, <b>right-click → Open → Open</b> or <b>System Settings → Privacy &amp; Security → Open Anyway</b> may be enough. Never disable Gatekeeper globally — you don't need to.</div>
             </details>
           </div>
         </div>
