@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Changelog — Spectra release notes, v0.8.0 alpha to v1.0.0 "Aurora" | Spectra</title>
+  <meta name="description" content="Everything that shipped in Spectra, release by release: v1.0.0 'Aurora' with the full analyzer + cleaner + monitor suite, plus the beta and alpha milestones that led there.">
+  <meta name="theme-color" content="#0a0a14">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Spectra">
+  <meta property="og:title" content="Spectra changelog — what's new">
+  <meta property="og:description" content="Release notes for the privacy-first Mac storage analyzer, from the first Disk X-Ray alpha to v1.0.0 'Aurora'.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Spectra changelog — what's new">
+  <meta name="twitter:description" content="Release notes from the first alpha to v1.0.0 'Aurora'.">
+
+  <!-- Favicon: spectrum diamond -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Cdefs%3E%3ClinearGradient%20id='g'%20x1='0'%20y1='0'%20x2='1'%20y2='1'%3E%3Cstop%20offset='0'%20stop-color='%2322d3ee'/%3E%3Cstop%20offset='.5'%20stop-color='%237c5cff'/%3E%3Cstop%20offset='1'%20stop-color='%23f472b6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath%20d='M32%204%2060%2032%2032%2060%204%2032Z'%20fill='url(%23g)'/%3E%3C/svg%3E">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/site.css">
+  <script src="assets/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ================= NAV (shared chrome) ================= -->
+  <header class="site-nav">
+    <div class="container nav-inner">
+      <a class="logo" href="index.html" aria-label="Spectra home">
+        <svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true">
+          <defs>
+            <linearGradient id="logo-grad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#22d3ee"/>
+              <stop offset=".5" stop-color="#7c5cff"/>
+              <stop offset="1" stop-color="#f472b6"/>
+            </linearGradient>
+          </defs>
+          <path d="M32 4 60 32 32 60 4 32Z" fill="url(#logo-grad)"/>
+        </svg>
+        Spectra
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html#features">Features</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="faq.html">FAQ</a>
+        <a class="is-active" href="changelog.html" aria-current="page">Changelog</a>
+        <a href="docs.html">Docs</a>
+        <a class="btn btn-sm" href="download.html">Download free</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ================= HERO ================= -->
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Changelog</span>
+        <h1>What's <span class="grad-text">new.</span></h1>
+        <p class="lead">Every release, honestly logged — from the first rough X-Ray alpha to today's 1.0. Spectra updates itself quietly; this page is the loud version.</p>
+      </div>
+    </section>
+
+    <!-- ================= TIMELINE ================= -->
+    <section class="section--tight">
+      <div class="container">
+        <div class="timeline">
+
+          <!-- v1.0.0 Aurora -->
+          <article class="tl-entry reveal" id="v1-0-0">
+            <div class="tl-head">
+              <span class="version-chip">v1.0.0</span>
+              <time class="tl-date" datetime="2026-08-30">August 30, 2026</time>
+            </div>
+            <h2 class="tl-name">"Aurora" — the first public release</h2>
+            <div class="tl-body panel">
+              <div class="tl-group">
+                <span class="tl-tag tl-tag--new">New</span>
+                <ul>
+                  <li><b>Disk X-Ray</b> — interactive treemap and sunburst of your entire disk, click-to-zoom down to single files</li>
+                  <li><b>Smart Clean</b> — caches, logs, browser junk, old installers and stale iOS backups in one reviewed pass</li>
+                  <li><b>Dev Cleaner</b> — Xcode junk, stale node_modules, Docker leftovers and package-manager caches</li>
+                  <li><b>Duplicate Finder</b> — byte-identical copies, verified by cryptographic hash</li>
+                  <li><b>Large &amp; Old Files</b> — the forgotten giants, sorted for the easiest wins first</li>
+                  <li><b>App Uninstaller</b> — removes apps together with their scattered leftovers</li>
+                  <li><b>Startup Items manager</b> — see and switch off login items and launch agents</li>
+                  <li><b>Live Monitoring</b> — CPU, RAM, network and battery, always a keystroke away</li>
+                  <li><b>Storage Timeline</b> — a running history of your free space</li>
+                  <li><b>Scheduled scans</b> with a quiet menu-bar presence</li>
+                  <li><b>HTML report export</b> — clean, self-contained, auditable reports</li>
+                  <li><b>Spectra Pro</b> — one-time US$11.99 lifetime license at launch (regularly $16.99)</li>
+                </ul>
+              </div>
+              <div class="tl-group">
+                <span class="tl-tag tl-tag--improved">Improved</span>
+                <ul>
+                  <li>Full-disk scan now completes in under a minute on Apple Silicon</li>
+                  <li>Universal binary — one download runs natively on Apple Silicon and Intel</li>
+                  <li>Ignore lists now sync across all analysis and cleaning views</li>
+                </ul>
+              </div>
+              <div class="tl-group">
+                <span class="tl-tag tl-tag--fixed">Fixed</span>
+                <ul>
+                  <li>Treemap tiles no longer flicker when a scan updates mid-hover</li>
+                  <li>Correct free-space reporting on volumes with APFS local snapshots</li>
+                  <li>Menu-bar icon respects reduced-transparency and increased-contrast settings</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <!-- v0.9.2 beta -->
+          <article class="tl-entry reveal" id="v0-9-2">
+            <div class="tl-head">
+              <span class="version-chip is-pre">v0.9.2 beta</span>
+              <time class="tl-date" datetime="2026-07-21">July 21, 2026</time>
+            </div>
+            <h2 class="tl-name">Release-candidate polish</h2>
+            <div class="tl-body panel">
+              <div class="tl-group">
+                <span class="tl-tag tl-tag--new">New</span>
+                <ul>
+                  <li><b>Sunburst view</b> — a second lens on the X-Ray, ring-by-ring through your folder tree</li>
+                  <li><b>5 themes</b> — Aurora, Daylight, Midnight, Solar and Mono (three are Pro)</li>
+                  <li>Demo mode now runs in the browser, no install needed to explore</li>
+                </ul>
+              </div>
+              <div class="tl-group">
+                <span class="tl-tag tl-tag--improved">Improved</span>
+                <ul>
+                  <li>Scan engine rewritten for lower memory use on 8 GB Macs</li>
+                  <li>Full keyboard navigation and VoiceOver labels across every view</li>
+                  <li>Smart Clean summaries now show per-item paths before you confirm</li>
+                </ul>
+              </div>
+              <div class="tl-group">
+                <span class="tl-tag tl-tag--fixed">Fixed</span>
+                <ul>
+                  <li>Rare crash when a scanned volume was ejected mid-scan</li>
+                  <li>Timeline chart mislabeled weeks that crossed a month boundary</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <!-- v0.9.0 beta -->
+          <article class="tl-entry reveal" id="v0-9-0">
+            <div class="tl-head">
+              <span class="version-chip is-pre">v0.9.0 beta</span>
+              <time class="tl-date" datetime="2026-05-30">May 30, 2026</time>
+            </div>
+            <h2 class="tl-name">The cleaning toolkit arrives</h2>
+            <div class="tl-body panel">
+              <div class="tl-group">
+                <span class="tl-tag tl-tag--new">New</span>
+                <ul>
+                  <li><b>Dev Cleaner</b> — first release: Xcode DerivedData, node_modules, Docker and package caches</li>
+                  <li><b>Duplicate Finder</b> — size pre-filter plus hash verification, with keep-one selection</li>
+                  <li>Ignore lists — fence off anything Spectra must never propose</li>
+                </ul>
+              </div>
+              <div class="tl-group">
+                <span class="tl-tag tl-tag--improved">Improved</span>
+                <ul>
+                  <li>All deletes routed through the Trash with a single explicit confirm dialog</li>
+                  <li>Large &amp; Old Files view gained age and size filters</li>
+                </ul>
+              </div>
+              <div class="tl-group">
+                <span class="tl-tag tl-tag--fixed">Fixed</span>
+                <ul>
+                  <li>Duplicate scan no longer follows symlinks into cloud-only placeholder files</li>
+                  <li>High CPU when the monitor panel was left open on external displays</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <!-- v0.8.0 alpha -->
+          <article class="tl-entry reveal" id="v0-8-0">
+            <div class="tl-head">
+              <span class="version-chip is-pre">v0.8.0 alpha</span>
+              <time class="tl-date" datetime="2026-03-12">March 12, 2026</time>
+            </div>
+            <h2 class="tl-name">First light — the Disk X-Ray</h2>
+            <div class="tl-body panel">
+              <div class="tl-group">
+                <span class="tl-tag tl-tag--new">New</span>
+                <ul>
+                  <li><b>Disk X-Ray</b> — the first interactive treemap, scanning a full disk and rendering every folder to scale</li>
+                  <li>Reveal in Finder from any tile</li>
+                  <li>100% local scanning from day one — no account, no telemetry, ever</li>
+                </ul>
+              </div>
+              <div class="tl-group">
+                <span class="tl-tag tl-tag--fixed">Fixed</span>
+                <ul>
+                  <li>Everything, constantly. It was an alpha — thank you, first fifty testers.</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FINAL CTA ================= -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-band grad-border reveal">
+          <h2>Run the <span class="grad-text">latest.</span></h2>
+          <p>v1.0.0 "Aurora" is free to download and scans your Mac in under a minute.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-lg js-download" href="https://github.com/prashant1998gupta/spectra/releases/download/v1.0.0/Spectra-1.0.0-arm64.dmg" data-live>Download v1.0.0 free</a>
+            <a class="btn-ghost btn-lg" href="index.html#features">Explore features</a>
+          </div>
+          <span class="btn-note">macOS 12 Monterey or later · Universal for Apple Silicon &amp; Intel</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER (shared chrome) ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="logo" href="index.html">
+            <svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true">
+              <defs>
+                <linearGradient id="logo-grad-f" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#22d3ee"/>
+                  <stop offset=".5" stop-color="#7c5cff"/>
+                  <stop offset="1" stop-color="#f472b6"/>
+                </linearGradient>
+              </defs>
+              <path d="M32 4 60 32 32 60 4 32Z" fill="url(#logo-grad-f)"/>
+            </svg>
+            Spectra
+          </a>
+          <p>See your Mac in full spectrum.<br>Made with care. 100% local.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="download.html">Download</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="changelog.html">Changelog</a></li>
+            <li><a href="docs.html">Docs</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="index.html#privacy">Privacy manifesto</a></li>
+            <li><a href="index.html#compare">Compare</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Spectra · Not affiliated with Apple Inc.</span>
+        <span>v1.0.0 · macOS 12+ · Universal</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

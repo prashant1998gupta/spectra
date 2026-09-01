@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spectra — See your Mac in full spectrum | Free Mac Storage Analyzer</title>
+  <meta name="description" content="Spectra is a privacy-first storage analyzer &amp; cleaner for macOS. X-ray your disk with interactive treemaps and sunbursts, then reclaim gigabytes with Smart Clean, Dev Cleaner and Duplicate Finder — 100% local, no account, one-time pricing.">
+  <meta name="theme-color" content="#0a0a14">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Spectra">
+  <meta property="og:title" content="Spectra — See your Mac in full spectrum">
+  <meta property="og:description" content="Privacy-first Mac storage analyzer &amp; cleaner. Interactive disk X-ray, Smart Clean, Dev Cleaner, duplicates and more — 100% local, no account, one-time US$11.99.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Spectra — See your Mac in full spectrum">
+  <meta name="twitter:description" content="Privacy-first Mac storage analyzer &amp; cleaner. 100% local, no account, one-time pricing.">
+
+  <!-- Favicon: spectrum diamond -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Cdefs%3E%3ClinearGradient%20id='g'%20x1='0'%20y1='0'%20x2='1'%20y2='1'%3E%3Cstop%20offset='0'%20stop-color='%2322d3ee'/%3E%3Cstop%20offset='.5'%20stop-color='%237c5cff'/%3E%3Cstop%20offset='1'%20stop-color='%23f472b6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath%20d='M32%204%2060%2032%2032%2060%204%2032Z'%20fill='url(%23g)'/%3E%3C/svg%3E">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/site.css">
+  <script src="assets/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ================= NAV (shared chrome) ================= -->
+  <header class="site-nav">
+    <div class="container nav-inner">
+      <a class="logo" href="index.html" aria-label="Spectra home">
+        <svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true">
+          <defs>
+            <linearGradient id="logo-grad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#22d3ee"/>
+              <stop offset=".5" stop-color="#7c5cff"/>
+              <stop offset="1" stop-color="#f472b6"/>
+            </linearGradient>
+          </defs>
+          <path d="M32 4 60 32 32 60 4 32Z" fill="url(#logo-grad)"/>
+        </svg>
+        Spectra
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html#features">Features</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="faq.html">FAQ</a>
+        <a href="changelog.html">Changelog</a>
+        <a href="docs.html">Docs</a>
+        <a class="btn btn-sm" href="download.html">Download free</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ================= 1. HERO ================= -->
+    <section class="hero">
+      <div class="container">
+        <span class="eyebrow">Privacy-first storage analyzer for macOS</span>
+        <h1>See your Mac in <span class="grad-text">full&nbsp;spectrum.</span></h1>
+        <p class="hero-sub">Spectra X-rays every byte on your disk, shows you exactly where the space went, and helps you reclaim gigabytes in minutes — 100% on your Mac. Your files never leave it.</p>
+
+        <div class="hero-ctas">
+          <a class="btn btn-lg js-download" href="https://github.com/prashant1998gupta/spectra/releases/download/v1.0.0/Spectra-1.0.0-arm64.dmg" data-live>Download free · Apple Silicon</a>
+          <a class="btn-ghost btn-lg" href="#demo-note">Try the live demo</a>
+        </div>
+        <span class="btn-note">Free · v1.0.0 · macOS 12 Monterey or later · Universal for Apple Silicon &amp; Intel</span>
+
+        <ul class="chips" aria-label="Trust points">
+          <li class="chip">No account</li>
+          <li class="chip">No telemetry</li>
+          <li class="chip">Trash-only deletes</li>
+          <li class="chip">One-time pricing</li>
+        </ul>
+
+        <!-- Hero visual: app-window mockup -->
+        <div class="hero-visual" aria-hidden="true">
+          <div class="aurora"></div>
+          <div class="window">
+            <div class="win-bar">
+              <div class="win-dots"><i></i><i></i><i></i></div>
+              <div class="win-title">Spectra — Macintosh HD · 788 GB used of 1 TB</div>
+            </div>
+            <div class="win-body">
+              <div class="win-side">
+                <span class="side-label">Analyze</span>
+                <span class="side-item is-active">Disk X-Ray</span>
+                <span class="side-item">Duplicates</span>
+                <span class="side-item">Large &amp; Old</span>
+                <span class="side-label">Clean</span>
+                <span class="side-item">Smart Clean</span>
+                <span class="side-item">Dev Cleaner</span>
+                <span class="side-item">Uninstaller</span>
+                <span class="side-label">Watch</span>
+                <span class="side-item">Monitor</span>
+                <span class="side-item">Timeline</span>
+              </div>
+              <div class="treemap">
+                <div class="tile t-violet c5 r2"><b>Movies</b><span>84 GB</span></div>
+                <div class="tile t-cyan c4 r2"><b>Photos Library</b><span>62 GB</span></div>
+                <div class="tile t-magenta c3 r2"><b>Xcode</b><span>41 GB</span></div>
+                <div class="tile t-indigo c3"><b>node_modules</b><span>18 GB</span></div>
+                <div class="tile t-sky c3"><b>Music</b><span>15 GB</span></div>
+                <div class="tile t-purple c2"><b>Downloads</b><span>12 GB</span></div>
+                <div class="tile t-pink c2"><b>iOS Backups</b><span>9.4 GB</span></div>
+                <div class="tile t-teal c2"><b>Docker</b><span>8.8 GB</span></div>
+                <div class="tile t-cyan c2"><b>Caches</b><span>7.2 GB</span></div>
+                <div class="tile t-indigo c2"><b>Mail</b><span>6.1 GB</span></div>
+                <div class="tile t-dim c2"><b>Logs</b><span>4.9 GB</span></div>
+                <div class="tile t-dim c2"><b>Other</b><span>5.3 GB</span></div>
+                <div class="tile t-violet c2"><b>Podcasts</b><span>3.8 GB</span></div>
+                <div class="tile t-magenta c2"><b>Old Installers</b><span>3.4 GB</span></div>
+                <div class="tile t-sky c3"><b>Books</b><span>2.6 GB</span></div>
+                <div class="tile t-purple c3"><b>Screenshots</b><span>2.2 GB</span></div>
+                <div class="tile t-teal c3"><b>Slack</b><span>1.9 GB</span></div>
+                <div class="tile t-dim c3"><b>Fonts</b><span>1.1 GB</span></div>
+              </div>
+            </div>
+            <div class="statbar">
+              <span><i class="dot-live"></i>Live</span>
+              <span>CPU <b>7%</b></span>
+              <span>RAM <b>9.2 GB</b></span>
+              <span>Net <b>↓ 1.2 MB/s</b></span>
+              <span>Battery <b>94%</b></span>
+              <span>Free <b>212 GB</b></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 2. METRICS STRIP ================= -->
+    <section class="section--tight">
+      <div class="container">
+        <div class="metrics reveal">
+          <div class="metric"><b>2.4 TB</b><span>average reclaimed per 100 users</span></div>
+          <div class="metric"><b>38 GB</b><span>median first-scan discovery</span></div>
+          <div class="metric"><b>&lt; 60 s</b><span>typical full-disk scan on Apple Silicon</span></div>
+          <div class="metric"><b>0 bytes</b><span>ever sent off your Mac</span></div>
+        </div>
+        <p class="metrics-note">Numbers from our private beta community, spring 2026. Every Mac is different — yours will vary.</p>
+      </div>
+    </section>
+
+    <!-- ================= 3. FEATURES ================= -->
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <span class="eyebrow">Everything in one lens</span>
+          <h2>One app. The whole <span class="grad-text">spectrum</span> of clean.</h2>
+          <p>From a bird's-eye X-ray of your disk to surgical developer cleanup — every tool you need to understand and reclaim your storage.</p>
+        </div>
+
+        <div class="features-grid">
+          <div class="card reveal">
+            <span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="5" rx="1.5"/><rect x="13" y="10" width="8" height="11" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/></svg></span>
+            <h3>Disk X-Ray</h3>
+            <p>An interactive treemap and sunburst of every folder. Click to dive, hover to inspect, and finally see where the space went.</p>
+          </div>
+
+          <div class="card reveal">
+            <span class="badge-pro">Pro</span>
+            <span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4l1.6 4.4L17 10l-4.4 1.6L11 16l-1.6-4.4L5 10l4.4-1.6z"/><path d="M18 15l.8 2.2L21 18l-2.2.8L18 21l-.8-2.2L15 18l2.2-.8z"/></svg></span>
+            <h3>Smart Clean</h3>
+            <p>Sweeps caches, logs, browser junk, old installers and stale iOS backups in one reviewed, reversible pass.</p>
+          </div>
+
+          <div class="card reveal">
+            <span class="badge-pro">Pro</span>
+            <span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><polyline points="7 9 10 12 7 15"/><line x1="12" y1="15" x2="17" y2="15"/></svg></span>
+            <h3>Dev Cleaner</h3>
+            <p>Purges Xcode junk, stale node_modules, Docker leftovers and package-manager caches — the gigabytes builds leave behind.</p>
+          </div>
+
+          <div class="card reveal">
+            <span class="badge-pro">Pro</span>
+            <span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M4 16V5a2 2 0 0 1 2-2h11"/></svg></span>
+            <h3>Duplicate Finder</h3>
+            <p>Finds byte-identical copies, verified by cryptographic hash — never a fuzzy guess. Keep one, trash the rest.</p>
+          </div>
+
+          <div class="card reveal">
+            <span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><polyline points="12 7.5 12 12 15.2 14"/></svg></span>
+            <h3>Large &amp; Old Files</h3>
+            <p>Surfaces the forgotten giants — huge files untouched for months — sorted so the easiest wins come first.</p>
+          </div>
+
+          <div class="card reveal">
+            <span class="badge-pro">Pro</span>
+            <span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 7 20 7"/><path d="M6.5 7l1 13h9l1-13"/><path d="M9.5 7V4h5v3"/><line x1="10.5" y1="11" x2="10.5" y2="16"/><line x1="13.5" y1="11" x2="13.5" y2="16"/></svg></span>
+            <h3>App Uninstaller</h3>
+            <p>Removes apps together with the preference files, caches and support folders they scatter across your system.</p>
+          </div>
+
+          <div class="card reveal">
+            <span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v8"/><path d="M7.2 6.2a7.5 7.5 0 1 0 9.6 0"/></svg></span>
+            <h3>Startup Items</h3>
+            <p>See every login item and launch agent, and switch off the ones slowing your boot — with one click to restore.</p>
+          </div>
+
+          <div class="card reveal">
+            <span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 12 8 12 10.5 6 13.5 18 16 12 21 12"/></svg></span>
+            <h3>Live Monitoring</h3>
+            <p>CPU, RAM, network and battery at a glance — always a keystroke away, sipping resources instead of hogging them.</p>
+          </div>
+
+          <div class="card reveal">
+            <span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 9.5 11 13.5 14.5 20 6.5"/><polyline points="20 11 20 6.5 15.5 6.5"/></svg></span>
+            <h3>Storage Timeline</h3>
+            <p>A running history of your free space, so you can spot what ate 40 GB last Tuesday — and get it back.</p>
+          </div>
+
+          <div class="card reveal">
+            <span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="3" x2="8" y2="7"/><line x1="16" y1="3" x2="16" y2="7"/></svg></span>
+            <h3>Scheduled Scans</h3>
+            <p>Spectra lives quietly in your menu bar and re-scans on your schedule, nudging you only when junk piles up.</p>
+          </div>
+
+          <div class="card reveal">
+            <span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l4 4v14H7z"/><line x1="10" y1="12" x2="15" y2="12"/><line x1="10" y1="16" x2="15" y2="16"/></svg></span>
+            <h3>HTML Reports</h3>
+            <p>Export any scan as a clean, self-contained HTML report — plain files you can read, share or archive anywhere.</p>
+          </div>
+
+          <div class="card reveal">
+            <span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5.2c0 4.4-2.9 7.4-7 8.8-4.1-1.4-7-4.4-7-8.8V6z"/><polyline points="9 11.6 11.4 14 15.4 9.6"/></svg></span>
+            <h3>Safe by Design</h3>
+            <p>Deletes go to the Trash only, after an explicit confirm. Ignore lists protect anything you never want touched.</p>
+          </div>
+        </div>
+
+        <p class="center small muted" style="margin-top:1.6rem">Plus five premium themes, a built-in browser demo mode, and more.</p>
+      </div>
+    </section>
+
+    <!-- ================= 4. DEEP-DIVE ROWS ================= -->
+    <section class="section" id="deep-dive">
+      <div class="container">
+
+        <!-- (a) Disk X-Ray -->
+        <div class="row">
+          <div class="row-copy reveal">
+            <span class="eyebrow">Disk X-Ray</span>
+            <h3>Your disk, finally legible.</h3>
+            <p>Two views of the same truth: a treemap for scale, a sunburst for structure. Every rectangle and ring is live — click to zoom into any folder, right down to the file.</p>
+            <ul>
+              <li>Scans a full disk in under a minute on Apple Silicon</li>
+              <li>Color-coded by file type across the spectrum</li>
+              <li>Reveal any item in Finder with one click</li>
+            </ul>
+          </div>
+          <div class="row-visual reveal" aria-hidden="true">
+            <div class="aurora"></div>
+            <div class="mock">
+              <div class="mock-title">X-Ray · Macintosh HD</div>
+              <div class="xray-mock">
+                <div class="mini-treemap">
+                  <div class="tile t-violet mc3 mr2"><b>Movies</b></div>
+                  <div class="tile t-cyan mc3"><b>Photos</b></div>
+                  <div class="tile t-magenta mc3"><b>Xcode</b></div>
+                  <div class="tile t-indigo mc2"><b>node_modules</b></div>
+                  <div class="tile t-teal mc2"><b>Docker</b></div>
+                  <div class="tile t-sky mc2"><b>Music</b></div>
+                  <div class="tile t-pink mc2"><b>Backups</b></div>
+                  <div class="tile t-dim mc2"><b>Logs</b></div>
+                  <div class="tile t-purple mc2"><b>Mail</b></div>
+                </div>
+                <div class="sunburst">
+                  <div class="sun-ring"></div>
+                  <div class="sun-core"></div>
+                  <div class="sun-label"><b>788 GB</b>used of 1 TB</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- (b) Smart Clean + Dev Cleaner -->
+        <div class="row row--flip">
+          <div class="row-copy reveal">
+            <span class="eyebrow">Smart Clean · Dev Cleaner</span>
+            <h3>Reclaim gigabytes without holding your breath.</h3>
+            <p>Spectra proposes, you decide. Every category is itemized and pre-scanned, nothing is selected behind your back, and every delete goes to the Trash where you can undo it.</p>
+            <ul>
+              <li>Caches, logs, browser junk, old installers, iOS backups</li>
+              <li>Developer mode: Xcode, node_modules, Docker, package caches</li>
+              <li>Ignore lists for anything that's off limits</li>
+            </ul>
+          </div>
+          <div class="row-visual reveal" aria-hidden="true">
+            <div class="aurora"></div>
+            <div class="mock">
+              <div class="mock-title">Smart Clean · Review</div>
+              <div class="checklist">
+                <div class="check-item is-on"><span class="box">✓</span> User caches <span class="size">6.8 GB</span></div>
+                <div class="check-item is-on"><span class="box">✓</span> Xcode DerivedData <span class="size">11.2 GB</span></div>
+                <div class="check-item is-on"><span class="box">✓</span> Old installers (.dmg / .pkg) <span class="size">5.4 GB</span></div>
+                <div class="check-item is-on"><span class="box">✓</span> Stale node_modules <span class="size">4.5 GB</span></div>
+                <div class="check-item is-on"><span class="box">✓</span> Browser junk <span class="size">3.1 GB</span></div>
+                <div class="check-item is-off"><span class="box"></span> iOS backups <span class="size">9.4 GB</span></div>
+              </div>
+              <div class="reclaim-bar">
+                <span class="hint">Everything goes to the Trash. Undo anytime.</span>
+                <span class="btn btn-sm">Reclaim 31 GB</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- (c) Monitoring + timeline -->
+        <div class="row">
+          <div class="row-copy reveal">
+            <span class="eyebrow">Live Monitoring · Storage Timeline</span>
+            <h3>Know your Mac's vitals. Watch space come back.</h3>
+            <p>A featherweight monitor keeps CPU, memory, network and battery in view, while the Storage Timeline charts your free space over weeks — so wins stay won.</p>
+            <ul>
+              <li>Menu-bar presence, out of the way until you need it</li>
+              <li>Scheduled re-scans keep the picture current</li>
+              <li>Timeline pinpoints the day space disappeared</li>
+            </ul>
+          </div>
+          <div class="row-visual reveal" aria-hidden="true">
+            <div class="aurora"></div>
+            <div class="mock">
+              <div class="mock-title">Monitor · Free space, last 30 days</div>
+              <div class="monitor-grid">
+                <div class="monitor-cell"><b>7%</b><span>CPU</span></div>
+                <div class="monitor-cell"><b>9.2 GB</b><span>RAM</span></div>
+                <div class="monitor-cell"><b>1.2 MB/s</b><span>Network</span></div>
+                <div class="monitor-cell"><b>94%</b><span>Battery</span></div>
+              </div>
+              <svg class="spark" viewBox="0 0 320 96" role="img" aria-label="Free space rising after a Smart Clean">
+                <defs>
+                  <linearGradient id="spark-stroke" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0" stop-color="#22d3ee"/>
+                    <stop offset=".55" stop-color="#7c5cff"/>
+                    <stop offset="1" stop-color="#f472b6"/>
+                  </linearGradient>
+                  <linearGradient id="spark-fill" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#7c5cff" stop-opacity=".35"/>
+                    <stop offset="1" stop-color="#7c5cff" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+                <path d="M0 68 L36 71 L72 62 L108 66 L144 58 L180 61 L210 54 L228 22 L264 26 L300 20 L320 22 L320 96 L0 96 Z" fill="url(#spark-fill)"/>
+                <path d="M0 68 L36 71 L72 62 L108 66 L144 58 L180 61 L210 54 L228 22 L264 26 L300 20 L320 22" fill="none" stroke="url(#spark-stroke)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="228" cy="22" r="4" fill="#f472b6"/>
+                <text x="234" y="14" fill="#a7abc4" font-size="10" font-family="Inter, sans-serif">Smart Clean · +31 GB</text>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= 5. HOW IT WORKS ================= -->
+    <section class="section" id="how">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <span class="eyebrow">How it works</span>
+          <h2>Four steps to a lighter Mac.</h2>
+        </div>
+        <div class="steps">
+          <div class="step reveal">
+            <span class="step-num">1</span>
+            <h3>Download</h3>
+            <p>Grab the free universal app and drag it to Applications. No account, no setup wizard.</p>
+          </div>
+          <div class="step reveal">
+            <span class="step-num">2</span>
+            <h3>Scan</h3>
+            <p>Point Spectra at a disk or folder. A full drive takes under a minute on Apple Silicon.</p>
+          </div>
+          <div class="step reveal">
+            <span class="step-num">3</span>
+            <h3>See</h3>
+            <p>Explore the treemap and sunburst. Every color band is a folder you can dive into.</p>
+          </div>
+          <div class="step reveal">
+            <span class="step-num">4</span>
+            <h3>Reclaim</h3>
+            <p>Review what Spectra found, confirm, and watch gigabytes return — via the Trash, always undoable.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 6. PRIVACY MANIFESTO ================= -->
+    <section class="section" id="privacy">
+      <div class="container">
+        <div class="manifesto grad-border reveal">
+          <span class="eyebrow">Privacy manifesto</span>
+          <h2>Your files are <span class="grad-text">none of our business.</span></h2>
+          <p>Spectra was built on a simple rule: a cleaning app should never need the internet. Scanning, hashing and cleaning all happen on your Mac, and stay there.</p>
+          <div class="manifesto-points">
+            <div class="manifesto-point">
+              <h3>Local processing</h3>
+              <p>Every byte is analyzed on-device. Nothing is uploaded, indexed remotely, or "improved with cloud AI".</p>
+            </div>
+            <div class="manifesto-point">
+              <h3>No account. No telemetry.</h3>
+              <p>There is nothing to sign up for and nothing phoning home. We can't see your data — by design, not by policy.</p>
+            </div>
+            <div class="manifesto-point">
+              <h3>Open report format</h3>
+              <p>Exports are plain, self-contained HTML you can open in any browser and audit line by line. No lock-in.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 7. COMPARISON ================= -->
+    <section class="section" id="compare">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <span class="eyebrow">Compare</span>
+          <h2>More than an analyzer. Less than a subscription.</h2>
+          <p>How Spectra stacks up against the usual suspects.</p>
+        </div>
+
+        <div class="table-wrap reveal">
+          <table class="compare">
+            <thead>
+              <tr>
+                <th scope="col">Capability</th>
+                <th scope="col" class="col-spectra">Spectra</th>
+                <th scope="col">DaisyDisk</th>
+                <th scope="col">CleanMyMac&nbsp;X</th>
+                <th scope="col">Finder</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Price model</th>
+                <td class="col-spectra">Free + $11.99 once</td>
+                <td class="mark-paid">$ one-time</td>
+                <td class="mark-paid">$ subscription</td>
+                <td>Included</td>
+              </tr>
+              <tr>
+                <th scope="row">Interactive treemap</th>
+                <td class="col-spectra"><span class="mark-yes">✓</span></td>
+                <td><span class="mark-no">✗</span></td>
+                <td><span class="mark-no">✗</span></td>
+                <td><span class="mark-no">✗</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Sunburst view</th>
+                <td class="col-spectra"><span class="mark-yes">✓</span></td>
+                <td><span class="mark-yes">✓</span></td>
+                <td><span class="mark-no">✗</span></td>
+                <td><span class="mark-no">✗</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Dedicated dev cleaner (Xcode, node_modules, Docker)</th>
+                <td class="col-spectra"><span class="mark-yes">✓</span></td>
+                <td><span class="mark-no">✗</span></td>
+                <td><span class="mark-no">✗</span></td>
+                <td><span class="mark-no">✗</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Hash-verified duplicate finder</th>
+                <td class="col-spectra"><span class="mark-yes">✓</span></td>
+                <td><span class="mark-no">✗</span></td>
+                <td><span class="mark-paid">$ separate app</span></td>
+                <td><span class="mark-no">✗</span></td>
+              </tr>
+              <tr>
+                <th scope="row">App uninstaller with leftover cleanup</th>
+                <td class="col-spectra"><span class="mark-yes">✓</span></td>
+                <td><span class="mark-no">✗</span></td>
+                <td><span class="mark-yes">✓</span></td>
+                <td><span class="mark-no">✗</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Live system stats</th>
+                <td class="col-spectra"><span class="mark-yes">✓</span></td>
+                <td><span class="mark-no">✗</span></td>
+                <td><span class="mark-yes">✓</span></td>
+                <td><span class="mark-no">✗</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Free-space timeline</th>
+                <td class="col-spectra"><span class="mark-yes">✓</span></td>
+                <td><span class="mark-no">✗</span></td>
+                <td><span class="mark-no">✗</span></td>
+                <td><span class="mark-no">✗</span></td>
+              </tr>
+              <tr>
+                <th scope="row">100% local · no account · no telemetry</th>
+                <td class="col-spectra"><span class="mark-yes">✓</span></td>
+                <td><span class="mark-no">—</span></td>
+                <td><span class="mark-no">—</span></td>
+                <td><span class="mark-yes">✓</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="compare-note">✓ built-in dedicated feature &nbsp;·&nbsp; ✗ not offered as a dedicated built-in feature &nbsp;·&nbsp; $ paid / paid separately &nbsp;·&nbsp; — varies or not publicly specified. Based on publicly available product information, August 2026; features and prices change — please verify with each vendor. All trademarks belong to their owners.</p>
+      </div>
+    </section>
+
+    <!-- ================= 8. PRICING TEASER ================= -->
+    <section class="section" id="pricing-teaser">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <span class="eyebrow">Pricing</span>
+          <h2>Free to see. One coffee-and-cake to clean.</h2>
+          <p>No subscription. No account. Ever.</p>
+        </div>
+
+        <div class="price-grid">
+          <div class="price-card reveal">
+            <span class="price-plan">Free</span>
+            <div class="price-tag"><b>$0</b></div>
+            <p class="price-sub">Understand your disk, forever free.</p>
+            <ul class="price-list">
+              <li>Disk X-Ray — treemap &amp; sunburst</li>
+              <li>Live monitoring</li>
+              <li>Large &amp; Old Files</li>
+              <li>Storage Timeline</li>
+            </ul>
+            <a class="btn-ghost js-download" href="https://github.com/prashant1998gupta/spectra/releases/latest" data-live>Download free</a>
+          </div>
+
+          <div class="price-card grad-border reveal">
+            <span class="price-flag">Launch price</span>
+            <span class="price-plan">Spectra Pro</span>
+            <div class="price-tag"><b>$11.99</b><span class="was">$16.99</span></div>
+            <p class="price-sub">One-time. Lifetime. 15-day refund, no questions.</p>
+            <ul class="price-list">
+              <li>Everything in Free</li>
+              <li>Smart Clean &amp; Dev Cleaner</li>
+              <li>Duplicate Finder &amp; App Uninstaller</li>
+              <li>Startup manager, report export, premium themes</li>
+              <li>Priority support</li>
+            </ul>
+            <a class="btn js-buy" href="#">Get Spectra Pro</a>
+          </div>
+        </div>
+
+        <p class="center" style="margin-top:1.8rem"><a class="btn-ghost btn-sm" href="pricing.html">Full pricing details →</a></p>
+      </div>
+    </section>
+
+    <!-- ================= 9. FAQ TEASER ================= -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <span class="eyebrow">FAQ</span>
+          <h2>Fair questions, straight answers.</h2>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item reveal">
+            <summary>Is Spectra really 100% local?</summary>
+            <div class="faq-a">Yes. Scanning, hashing, cleaning and reporting all run on your Mac and the results stay there. Spectra needs no account, sends no telemetry, and works perfectly with the network cable unplugged.</div>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Can Spectra delete something important?</summary>
+            <div class="faq-a">Spectra never bypasses the Trash. Every delete is itemized, explicitly confirmed by you, and lands in the Trash where it can be restored. Ignore lists let you fence off anything that must never be touched.</div>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Is Pro really a one-time purchase?</summary>
+            <div class="faq-a">Really. Spectra Pro is US$11.99 once — a launch price, regularly $16.99 — and it's yours for life. No subscription ever, and a 15-day money-back guarantee if it's not for you.</div>
+          </details>
+          <details class="faq-item reveal">
+            <summary>What does my Mac need to run it?</summary>
+            <div class="faq-a">macOS 12 Monterey or later. Spectra v1.0.0 ships as a universal build, native on both Apple Silicon and Intel Macs.</div>
+          </details>
+        </div>
+
+        <p class="center" style="margin-top:1.8rem"><a class="btn-ghost btn-sm" href="faq.html">All questions →</a></p>
+      </div>
+    </section>
+
+    <!-- ================= 10. FINAL CTA ================= -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-band grad-border reveal">
+          <h2>Stop guessing where your <span class="grad-text">space went.</span></h2>
+          <p>Scan your Mac in under a minute. See everything. Keep everything private.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-lg js-download" href="https://github.com/prashant1998gupta/spectra/releases/download/v1.0.0/Spectra-1.0.0-arm64.dmg" data-live>Download free · Apple Silicon</a>
+            <a class="btn-ghost btn-lg" href="pricing.html">See pricing</a>
+          </div>
+          <span class="btn-note">v1.0.0 · macOS 12 Monterey or later · Universal for Apple Silicon &amp; Intel</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Demo mode note -->
+    <section class="section--tight" id="demo-note">
+      <div class="container">
+        <aside class="demo-note panel">
+          <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><line x1="12" y1="10.5" x2="12" y2="16.5"/><circle cx="12" cy="7.5" r="0.4"/></svg></span>
+          <p><b>About the live demo.</b> Spectra ships with a built-in demo mode that runs right in your browser view of the app — a full, safe walkthrough on a realistic sample disk, so you can explore every feature before scanning a single real file. It's included in the free download; no separate install and nothing to sign up for.</p>
+        </aside>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER (shared chrome) ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="logo" href="index.html">
+            <svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true">
+              <defs>
+                <linearGradient id="logo-grad-f" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#22d3ee"/>
+                  <stop offset=".5" stop-color="#7c5cff"/>
+                  <stop offset="1" stop-color="#f472b6"/>
+                </linearGradient>
+              </defs>
+              <path d="M32 4 60 32 32 60 4 32Z" fill="url(#logo-grad-f)"/>
+            </svg>
+            Spectra
+          </a>
+          <p>See your Mac in full spectrum.<br>Made with care. 100% local.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="download.html">Download</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="changelog.html">Changelog</a></li>
+            <li><a href="docs.html">Docs</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="index.html#privacy">Privacy manifesto</a></li>
+            <li><a href="index.html#compare">Compare</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Spectra · Not affiliated with Apple Inc.</span>
+        <span>v1.0.0 · macOS 12+ · Universal</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ — Getting started, privacy, cleaning &amp; licensing | Spectra</title>
+  <meta name="description" content="Answers to common Spectra questions: Apple Silicon vs Intel, macOS requirements, how safe cleaning is, what System Data means, hash-verified duplicate detection, Dev Cleaner safety, Gatekeeper fixes, licensing and refunds.">
+  <meta name="theme-color" content="#0a0a14">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Spectra">
+  <meta property="og:title" content="Spectra FAQ — questions, answered">
+  <meta property="og:description" content="Getting started, privacy &amp; safety, cleaning, and licensing — straight answers about the privacy-first Mac storage analyzer.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Spectra FAQ — questions, answered">
+  <meta name="twitter:description" content="Getting started, privacy &amp; safety, cleaning, and licensing — straight answers.">
+
+  <!-- Favicon: spectrum diamond -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Cdefs%3E%3ClinearGradient%20id='g'%20x1='0'%20y1='0'%20x2='1'%20y2='1'%3E%3Cstop%20offset='0'%20stop-color='%2322d3ee'/%3E%3Cstop%20offset='.5'%20stop-color='%237c5cff'/%3E%3Cstop%20offset='1'%20stop-color='%23f472b6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath%20d='M32%204%2060%2032%2032%2060%204%2032Z'%20fill='url(%23g)'/%3E%3C/svg%3E">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/site.css">
+  <script src="assets/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ================= NAV (shared chrome) ================= -->
+  <header class="site-nav">
+    <div class="container nav-inner">
+      <a class="logo" href="index.html" aria-label="Spectra home">
+        <svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true">
+          <defs>
+            <linearGradient id="logo-grad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#22d3ee"/>
+              <stop offset=".5" stop-color="#7c5cff"/>
+              <stop offset="1" stop-color="#f472b6"/>
+            </linearGradient>
+          </defs>
+          <path d="M32 4 60 32 32 60 4 32Z" fill="url(#logo-grad)"/>
+        </svg>
+        Spectra
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html#features">Features</a>
+        <a href="pricing.html">Pricing</a>
+        <a class="is-active" href="faq.html" aria-current="page">FAQ</a>
+        <a href="changelog.html">Changelog</a>
+        <a href="docs.html">Docs</a>
+        <a class="btn btn-sm" href="download.html">Download free</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ================= HERO ================= -->
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">FAQ</span>
+        <h1>Questions, <span class="grad-text">answered.</span></h1>
+        <p class="lead">Everything people ask before — and right after — their first scan. Can't find yours? The answer to "does it phone home" is still no.</p>
+      </div>
+    </section>
+
+    <!-- ================= GETTING STARTED ================= -->
+    <section class="section--tight">
+      <div class="container">
+
+        <div class="faq-group" id="getting-started">
+          <div class="faq-group-head">
+            <h2>Getting started</h2>
+            <span>Download, install, first scan</span>
+          </div>
+          <div class="faq-list">
+            <details class="faq-item reveal">
+              <summary>Do I need the Apple Silicon or the Intel download?</summary>
+              <div class="faq-a">If your Mac has an M-series chip (M1 or later, roughly 2020 onward), grab the Apple Silicon build; older Macs take the Intel build. Not sure? Open <b>&#63743; menu → About This Mac</b> — the "Chip" line says Apple M-something, the "Processor" line says Intel. Both builds are the same v1.0.0 app, natively compiled for each architecture, and the download page tries to detect the right one for you.</div>
+            </details>
+            <details class="faq-item reveal">
+              <summary>Which versions of macOS does Spectra support?</summary>
+              <div class="faq-a">Spectra requires <b>macOS 12 Monterey or later</b> — that covers Monterey, Ventura, Sonoma, Sequoia and newer. We target Monterey as the floor because it's the oldest release with the file-system and permission APIs Spectra relies on for fast, safe scanning. Anything older, unfortunately, can't run it.</div>
+            </details>
+            <details class="faq-item reveal">
+              <summary>Can I try Spectra without scanning my real disk?</summary>
+              <div class="faq-a">Yes — Spectra ships with a built-in <b>demo mode</b> that runs on a realistic sample disk, right in your browser view of the app. You can click through the treemap, run a pretend Smart Clean and explore every feature without touching a single real file. It's included in the free download, with nothing to sign up for.</div>
+            </details>
+            <details class="faq-item reveal">
+              <summary>macOS says the app "can't be opened". What do I do?</summary>
+              <div class="faq-a">That's Gatekeeper being cautious about apps downloaded outside the App Store. The fix takes ten seconds: <b>right-click (or Control-click) Spectra in Applications → Open → Open</b> in the confirmation dialog. macOS remembers your choice and never asks again. On newer macOS versions you can also approve it under <b>System Settings → Privacy &amp; Security → Open Anyway</b>. Never disable Gatekeeper globally — you don't need to.</div>
+            </details>
+          </div>
+        </div>
+
+        <div class="faq-group" id="privacy-safety">
+          <div class="faq-group-head">
+            <h2>Privacy &amp; safety</h2>
+            <span>What Spectra can — and can't — touch</span>
+          </div>
+          <div class="faq-list">
+            <details class="faq-item reveal">
+              <summary>Does Spectra phone home?</summary>
+              <div class="faq-a">No. Spectra needs no account, sends no telemetry, no analytics, no crash reports, no "anonymized usage data". Scanning, hashing, cleaning and report generation all happen on your Mac, and the results stay there. Unplug the network cable and every feature keeps working — that's the honest test, and Spectra passes it.</div>
+            </details>
+            <details class="faq-item reveal">
+              <summary>Is it safe? Could Spectra delete something important?</summary>
+              <div class="faq-a">Spectra is built around three guardrails. First, it never deletes anything on its own — every item is listed for your review and needs an explicit confirm. Second, deletes are <b>Trash-only</b>: nothing is ever hard-deleted, so anything can be restored with one click until you empty the Trash yourself. Third, <b>ignore lists</b> let you fence off folders Spectra must never propose. System-critical paths are excluded from cleaning suggestions entirely.</div>
+            </details>
+            <details class="faq-item reveal">
+              <summary>What is "System Data" and why is it so huge?</summary>
+              <div class="faq-a">"System Data" in macOS storage settings is a catch-all bucket: app caches, logs, browser profiles, Time Machine local snapshots, virtual machine images, developer junk and anything else macOS didn't classify. That's exactly what Spectra's Disk X-Ray untangles — instead of one opaque grey bar, you get a treemap where every gigabyte has a name and a folder you can open. Most of the "mystery" usually turns out to be caches and developer leftovers, which Smart Clean and Dev Cleaner handle.</div>
+            </details>
+            <details class="faq-item reveal">
+              <summary>I emptied the Trash but my disk is still full. Why?</summary>
+              <div class="faq-a">Two usual suspects. First, <b>APFS local snapshots</b>: macOS keeps point-in-time copies of your disk (mostly for Time Machine), so deleted files can live on inside a snapshot until macOS ages it out — usually within 24 hours. Second, <b>purgeable space</b>: macOS reports some space as used but reclaims it automatically when needed. Spectra's Storage Timeline makes this visible — you'll see free space climb over the hours after a big clean instead of instantly.</div>
+            </details>
+          </div>
+        </div>
+
+        <div class="faq-group" id="cleaning">
+          <div class="faq-group-head">
+            <h2>Cleaning</h2>
+            <span>How the reclaiming actually works</span>
+          </div>
+          <div class="faq-list">
+            <details class="faq-item reveal">
+              <summary>How does duplicate detection work?</summary>
+              <div class="faq-a">In two passes. Spectra first groups files by exact size — a cheap filter that rules out most of the disk instantly. Surviving candidates are then read and compared by <b>cryptographic hash</b>, so a match means the files are byte-for-byte identical. There is no "similar-looking photo" guesswork and no fuzzy matching: if Spectra calls something a duplicate, it is one. You pick which copy to keep; the rest go to the Trash.</div>
+            </details>
+            <details class="faq-item reveal">
+              <summary>Is Dev Cleaner safe? What about my node_modules?</summary>
+              <div class="faq-a">Dev Cleaner only targets artifacts your tools rebuild on demand: Xcode DerivedData and old simulator runtimes, <code>node_modules</code> folders in projects you haven't touched in months, dangling Docker images, and package-manager caches (npm, yarn, pnpm, Homebrew, CocoaPods). Deleting a <b>node_modules regenerates completely with one <code>npm install</code></b> — your source code and lockfiles are never touched. Everything is itemized per project before you confirm, and active projects can be added to the ignore list.</div>
+            </details>
+            <details class="faq-item reveal">
+              <summary>What exactly does Smart Clean remove?</summary>
+              <div class="faq-a">Five reviewed categories: user app caches, old logs, browser junk (stale caches and leftover profiles from browsers you've removed), forgotten installers (<code>.dmg</code> and <code>.pkg</code> files in Downloads), and stale iOS device backups. Each category is pre-scanned and itemized with sizes; nothing is pre-selected behind your back, and everything goes to the Trash after your confirm — never straight to oblivion.</div>
+            </details>
+            <details class="faq-item reveal">
+              <summary>How is Spectra different from DaisyDisk or CleanMyMac?</summary>
+              <div class="faq-a">DaisyDisk is a beautiful visual analyzer; CleanMyMac is a subscription cleaning suite. Spectra is deliberately both, plus a monitor: an interactive treemap <em>and</em> sunburst analyzer, a full cleaning toolkit (Smart Clean, Dev Cleaner, hash-verified duplicates, uninstaller, startup manager), and live system stats with a storage timeline — in one app, 100% local, for a <b>one-time $11.99</b> instead of a yearly fee. If you're a developer, the dedicated Dev Cleaner alone usually pays the difference in reclaimed gigabytes.</div>
+            </details>
+          </div>
+        </div>
+
+        <div class="faq-group" id="licensing">
+          <div class="faq-group-head">
+            <h2>Licensing</h2>
+            <span>Buying, activating, refunds</span>
+          </div>
+          <div class="faq-list">
+            <details class="faq-item reveal">
+              <summary>Is Spectra Pro really a one-time purchase?</summary>
+              <div class="faq-a">Really. US$11.99 once — a launch price, regularly $16.99 — and Pro is yours for life, including all updates in the 1.x series. There is no subscription and never will be. If a paid major upgrade ever ships, it will be optional and discounted for existing owners, and your version keeps working.</div>
+            </details>
+            <details class="faq-item reveal">
+              <summary>How many Macs can I activate, and how do I get my license?</summary>
+              <div class="faq-a">One license covers up to <b>3 Macs</b>. Your license key arrives <b>by email</b> within minutes of purchase — paste it into Spectra once per machine and you're set. No account is created; the key is your proof of purchase. Swapping machines is fine: deactivate the old Mac inside the app and activate the new one.</div>
+            </details>
+            <details class="faq-item reveal">
+              <summary>What's the refund policy?</summary>
+              <div class="faq-a">A 15-day money-back guarantee, no questions asked. If Spectra Pro isn't for you, reply to your license email within 15 days of purchase and you get a full refund — and the free tier remains yours to keep using. Students and educators also get 30% off; see the <a href="pricing.html#purchase-faq" style="text-decoration:underline">purchase FAQ</a> for details.</div>
+            </details>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= FINAL CTA ================= -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-band grad-border reveal">
+          <h2>The best answer is a <span class="grad-text">first scan.</span></h2>
+          <p>Free, under a minute, and entirely on your Mac. See for yourself where the space went.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-lg js-download" href="https://github.com/prashant1998gupta/spectra/releases/download/v1.0.0/Spectra-1.0.0-arm64.dmg" data-live>Download free · Apple Silicon</a>
+            <a class="btn-ghost btn-lg" href="pricing.html">See pricing</a>
+          </div>
+          <span class="btn-note">v1.0.0 · macOS 12 Monterey or later · Universal for Apple Silicon &amp; Intel</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER (shared chrome) ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="logo" href="index.html">
+            <svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true">
+              <defs>
+                <linearGradient id="logo-grad-f" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#22d3ee"/>
+                  <stop offset=".5" stop-color="#7c5cff"/>
+                  <stop offset="1" stop-color="#f472b6"/>
+                </linearGradient>
+              </defs>
+              <path d="M32 4 60 32 32 60 4 32Z" fill="url(#logo-grad-f)"/>
+            </svg>
+            Spectra
+          </a>
+          <p>See your Mac in full spectrum.<br>Made with care. 100% local.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="download.html">Download</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="changelog.html">Changelog</a></li>
+            <li><a href="docs.html">Docs</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="index.html#privacy">Privacy manifesto</a></li>
+            <li><a href="index.html#compare">Compare</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Spectra · Not affiliated with Apple Inc.</span>
+        <span>v1.0.0 · macOS 12+ · Universal</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

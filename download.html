@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download — Spectra v1.0.0 for Apple Silicon &amp; Intel Macs | Spectra</title>
+  <meta name="description" content="Download Spectra v1.0.0 free for macOS 12 Monterey or later. Native builds for Apple Silicon and Intel, SHA-256 checksums, and a 60-second path from download to your first disk X-ray.">
+  <meta name="theme-color" content="#0a0a14">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Spectra">
+  <meta property="og:title" content="Get Spectra — free download for macOS">
+  <meta property="og:description" content="Spectra v1.0.0 for Apple Silicon and Intel Macs. Free, 100% local, no account — drag to Applications and scan in under a minute.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Get Spectra — free download for macOS">
+  <meta name="twitter:description" content="Spectra v1.0.0 for Apple Silicon and Intel Macs. Free, 100% local, no account.">
+
+  <!-- Favicon: spectrum diamond -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Cdefs%3E%3ClinearGradient%20id='g'%20x1='0'%20y1='0'%20x2='1'%20y2='1'%3E%3Cstop%20offset='0'%20stop-color='%2322d3ee'/%3E%3Cstop%20offset='.5'%20stop-color='%237c5cff'/%3E%3Cstop%20offset='1'%20stop-color='%23f472b6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath%20d='M32%204%2060%2032%2032%2060%204%2032Z'%20fill='url(%23g)'/%3E%3C/svg%3E">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/site.css">
+  <script src="assets/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ================= NAV (shared chrome) ================= -->
+  <header class="site-nav">
+    <div class="container nav-inner">
+      <a class="logo" href="index.html" aria-label="Spectra home">
+        <svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true">
+          <defs>
+            <linearGradient id="logo-grad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#22d3ee"/>
+              <stop offset=".5" stop-color="#7c5cff"/>
+              <stop offset="1" stop-color="#f472b6"/>
+            </linearGradient>
+          </defs>
+          <path d="M32 4 60 32 32 60 4 32Z" fill="url(#logo-grad)"/>
+        </svg>
+        Spectra
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html#features">Features</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="faq.html">FAQ</a>
+        <a href="changelog.html">Changelog</a>
+        <a href="docs.html">Docs</a>
+        <a class="btn btn-sm" href="download.html" aria-current="page">Download free</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ================= HERO ================= -->
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Download · v1.0.0 "Aurora"</span>
+        <h1>Get <span class="grad-text">Spectra.</span></h1>
+        <p class="lead">Free, about 24 MB, and entirely yours — no account, no installer wizard, no telemetry. Pick your chip and you're one drag away from your first X-ray.</p>
+        <ul class="chips" aria-label="Download facts">
+          <li class="chip">Free download</li>
+          <li class="chip">macOS 12 Monterey+</li>
+          <li class="chip">Direct .dmg download</li>
+          <li class="chip">100% local</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= DOWNLOAD CARDS ================= -->
+    <section class="section--tight" id="builds">
+      <div class="container">
+        <div class="dl-grid">
+          <article class="dl-card panel is-recommended reveal" data-arch="silicon">
+            <span class="dl-flag" data-flag>Recommended for your Mac</span>
+            <h2>Apple Silicon</h2>
+            <p class="dl-sub">For Macs with M-series chips — M1 and every generation since. Native ARM64, and the fastest way to run Spectra.</p>
+            <a class="btn btn-lg js-download" href="https://github.com/prashant1998gupta/spectra/releases/download/v1.0.0/Spectra-1.0.0-arm64.dmg" data-live>Download for Apple Silicon</a>
+            <ul class="dl-meta">
+              <li><b>Spectra-1.0.0-arm64.dmg</b> · ~24 MB</li>
+              <li>v1.0.0 · macOS 12 Monterey or later</li>
+              <li>First launch: right-click → Open (notarization coming) · scans a full disk in under a minute</li>
+            </ul>
+          </article>
+
+          <article class="dl-card panel reveal" data-arch="intel">
+            <span class="dl-flag" data-flag>Recommended for your Mac</span>
+            <h2>Intel</h2>
+            <p class="dl-sub">For Intel-based Macs, roughly 2019 and earlier. The same app, natively compiled for x86-64 — nothing runs in translation.</p>
+            <a class="btn-ghost btn-lg js-download" href="https://github.com/prashant1998gupta/spectra/releases/download/v1.0.0/Spectra-1.0.0-x64.dmg" data-live>Download for Intel</a>
+            <ul class="dl-meta">
+              <li><b>Spectra-1.0.0-x64.dmg</b> · ~25 MB</li>
+              <li>v1.0.0 · macOS 12 Monterey or later</li>
+              <li>First launch: right-click → Open (notarization coming) · full feature parity with Apple Silicon</li>
+            </ul>
+          </article>
+        </div>
+
+        <p class="dl-detect" data-detect>Not sure which chip you have? Open <b>&#63743; menu → About This Mac</b> — "Chip: Apple M…" means Apple Silicon.</p>
+      </div>
+    </section>
+
+    <!-- ================= WHAT HAPPENS NEXT ================= -->
+    <section class="section" id="next">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <span class="eyebrow">What happens next</span>
+          <h2>From download to X-ray in <span class="grad-text">three steps.</span></h2>
+        </div>
+        <div class="steps steps--3">
+          <div class="step reveal">
+            <span class="step-num">1</span>
+            <h3>Drag to Applications</h3>
+            <p>Open the .dmg and drag Spectra into Applications. That's the whole install — no wizard, no agreement marathon, no account.</p>
+          </div>
+          <div class="step reveal">
+            <span class="step-num">2</span>
+            <h3>Run your first scan</h3>
+            <p>Point Spectra at your disk and grant Full Disk Access when macOS asks. Under a minute later, every gigabyte has a name.</p>
+          </div>
+          <div class="step reveal">
+            <span class="step-num">3</span>
+            <h3>Go Pro — if you want</h3>
+            <p>The free tier is yours forever. When you're ready to reclaim space, Spectra Pro is a one-time $11.99 — unlocked with a key, right in the app.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= REQUIREMENTS ================= -->
+    <section class="section--tight" id="requirements">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <span class="eyebrow">Requirements</span>
+          <h2>What your Mac needs.</h2>
+        </div>
+        <ul class="tick-list reveal">
+          <li><b>macOS 12 Monterey or later</b> — Monterey, Ventura, Sonoma, Sequoia and newer</li>
+          <li><b>Apple Silicon or Intel</b> — native builds for both; no Rosetta required</li>
+          <li><b>About 60 MB of disk space</b> — ironic, we know; Spectra earns it back quickly</li>
+          <li><b>Full Disk Access</b> (optional but recommended) — lets the X-Ray see everything; granted once in System Settings</li>
+          <li><b>No internet connection needed</b> — Spectra works fully offline, by design</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= CHECKSUMS ================= -->
+    <section class="section--tight" id="checksums">
+      <div class="container">
+        <div class="sha-block panel reveal">
+          <h3>Verify your download — SHA-256</h3>
+          <p class="sha-intro">Paranoia is a feature. After downloading, run <code>shasum -a 256 ~/Downloads/Spectra-1.0.0-*.dmg</code> in Terminal and compare. Final checksums are published here with each release.</p>
+          <div class="sha-row">
+            <span class="file">Spectra-1.0.0-arm64.dmg</span>
+            <code>0000000000000000000000000000000000000000000000000000000000000000 — published at release</code>
+          </div>
+          <div class="sha-row">
+            <span class="file">Spectra-1.0.0-x64.dmg</span>
+            <code>0000000000000000000000000000000000000000000000000000000000000000 — published at release</code>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= OTHER PLATFORMS NOTE ================= -->
+    <section class="section--tight" id="other-platforms">
+      <div class="container">
+        <aside class="demo-note panel">
+          <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span>
+          <p><b>On Windows or Linux?</b> Spectra's core engine is cross-platform — desktop builds for other systems are on the roadmap. For now, Spectra is crafted for the Mac, and the browser demo mode works anywhere if you'd like a look around.</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ================= FINAL CTA ================= -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-band grad-border reveal">
+          <h2>Your disk has <span class="grad-text">stories to tell.</span></h2>
+          <p>Download free, scan in under a minute, and see your Mac in full spectrum.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-lg js-download" href="https://github.com/prashant1998gupta/spectra/releases/download/v1.0.0/Spectra-1.0.0-arm64.dmg" data-live>Download free · Apple Silicon</a>
+            <a class="btn-ghost btn-lg" href="pricing.html">See pricing</a>
+          </div>
+          <span class="btn-note">v1.0.0 · macOS 12 Monterey or later · Universal for Apple Silicon &amp; Intel</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER (shared chrome) ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="logo" href="index.html">
+            <svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true">
+              <defs>
+                <linearGradient id="logo-grad-f" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#22d3ee"/>
+                  <stop offset=".5" stop-color="#7c5cff"/>
+                  <stop offset="1" stop-color="#f472b6"/>
+                </linearGradient>
+              </defs>
+              <path d="M32 4 60 32 32 60 4 32Z" fill="url(#logo-grad-f)"/>
+            </svg>
+            Spectra
+          </a>
+          <p>See your Mac in full spectrum.<br>Made with care. 100% local.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="download.html">Download</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="changelog.html">Changelog</a></li>
+            <li><a href="docs.html">Docs</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="index.html#privacy">Privacy manifesto</a></li>
+            <li><a href="index.html#compare">Compare</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Spectra · Not affiliated with Apple Inc.</span>
+        <span>v1.0.0 · macOS 12+ · Universal</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Best-effort architecture detection: highlights the right build.
+       Defaults to Apple Silicon; browsers hide the CPU, so we peek at the
+       GPU renderer string via WebGL — an Apple GPU means Apple Silicon. -->
+  <script>
+    (function () {
+      "use strict";
+
+      function detectArch() {
+        var ua = navigator.userAgent || "";
+        var isMac = /Macintosh|Mac OS X/i.test(ua);
+        if (!isMac) return { arch: "silicon", mac: false };
+        try {
+          var canvas = document.createElement("canvas");
+          var gl = canvas.getContext("webgl2") || canvas.getContext("webgl");
+          if (gl) {
+            var ext = gl.getExtension("WEBGL_debug_renderer_info");
+            var renderer = ext
+              ? gl.getParameter(ext.UNMASKED_RENDERER_WEBGL)
+              : gl.getParameter(gl.RENDERER);
+            renderer = String(renderer || "");
+            // Only an explicit "Apple M1/M2/…" is proof — Safari masks the GPU
+            // as plain "Apple GPU" even on Intel Macs, so that string proves nothing.
+            if (/Apple\s*M\d/i.test(renderer)) return { arch: "silicon", mac: true, sure: true };
+            if (/(AMD|Radeon|NVIDIA|GeForce|Intel(R)?\s*(Iris|HD|UHD))/i.test(renderer)) return { arch: "intel", mac: true, sure: true };
+          }
+        } catch (e) { /* detection is best-effort only */ }
+        return { arch: "silicon", mac: true, sure: false };
+      }
+
+      function apply() {
+        var result = detectArch();
+        var cards = document.querySelectorAll(".dl-card[data-arch]");
+        if (!cards.length) return;
+
+        cards.forEach(function (card) {
+          var match = card.getAttribute("data-arch") === result.arch;
+          card.classList.toggle("is-recommended", match);
+          var flag = card.querySelector("[data-flag]");
+          if (flag) flag.textContent = result.mac && result.sure ? "Recommended for your Mac" : "Recommended";
+          var btn = card.querySelector(".js-download");
+          if (btn) {
+            btn.classList.toggle("btn", match);
+            btn.classList.toggle("btn-ghost", !match);
+          }
+        });
+
+        var detect = document.querySelector("[data-detect]");
+        if (detect && result.mac && result.sure) {
+          detect.innerHTML = result.arch === "silicon"
+            ? "Looks like this Mac runs <b>Apple Silicon</b> — we've highlighted the right build. Wrong guess? Both builds are identical in features."
+            : "Looks like this Mac has an <b>Intel</b> processor — we've highlighted the right build. Wrong guess? Both builds are identical in features.";
+        }
+      }
+
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", apply);
+      } else {
+        apply();
+      }
+    })();
+  </script>
+</body>
+</html>
