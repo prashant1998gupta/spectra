@@ -105,7 +105,7 @@
       var btn = e.target.closest(".js-download");
       if (!btn || btn.hasAttribute("data-live")) return;
       e.preventDefault();
-      showToast("Coming soon — join the waitlist");
+      showToast("Downloads go live the moment v1.0.0 is published — see the changelog");
     });
   }
 

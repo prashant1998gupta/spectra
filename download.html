@@ -67,7 +67,7 @@
       <div class="container">
         <span class="eyebrow">Download · v1.0.0 "Aurora"</span>
         <h1>Get <span class="grad-text">Spectra.</span></h1>
-        <p class="lead">Free, about 24 MB, and entirely yours — no account, no installer wizard, no telemetry. Pick your chip and you're one drag away from your first X-ray.</p>
+        <p class="lead">Free, about 105 MB, and entirely yours — no account, no installer wizard, no telemetry. Pick your chip and you're one drag away from your first X-ray.</p>
         <ul class="chips" aria-label="Download facts">
           <li class="chip">Free download</li>
           <li class="chip">macOS 12 Monterey+</li>
@@ -85,9 +85,9 @@
             <span class="dl-flag" data-flag>Recommended for your Mac</span>
             <h2>Apple Silicon</h2>
             <p class="dl-sub">For Macs with M-series chips — M1 and every generation since. Native ARM64, and the fastest way to run Spectra.</p>
-            <a class="btn btn-lg js-download" href="https://github.com/prashant1998gupta/spectra/releases/download/v1.0.0/Spectra-1.0.0-arm64.dmg" data-live>Download for Apple Silicon</a>
+            <a class="btn btn-lg js-download" href="https://github.com/prashant1998gupta/spectra/releases/download/v1.0.0/Spectra-1.0.0-arm64.dmg">Download for Apple Silicon</a>
             <ul class="dl-meta">
-              <li><b>Spectra-1.0.0-arm64.dmg</b> · ~24 MB</li>
+              <li><b>Spectra-1.0.0-arm64.dmg</b> · ~102 MB</li>
               <li>v1.0.0 · macOS 12 Monterey or later</li>
               <li>First launch: right-click → Open (notarization coming) · scans a full disk in under a minute</li>
             </ul>
@@ -97,9 +97,9 @@
             <span class="dl-flag" data-flag>Recommended for your Mac</span>
             <h2>Intel</h2>
             <p class="dl-sub">For Intel-based Macs, roughly 2019 and earlier. The same app, natively compiled for x86-64 — nothing runs in translation.</p>
-            <a class="btn-ghost btn-lg js-download" href="https://github.com/prashant1998gupta/spectra/releases/download/v1.0.0/Spectra-1.0.0-x64.dmg" data-live>Download for Intel</a>
+            <a class="btn-ghost btn-lg js-download" href="https://github.com/prashant1998gupta/spectra/releases/download/v1.0.0/Spectra-1.0.0-x64.dmg">Download for Intel</a>
             <ul class="dl-meta">
-              <li><b>Spectra-1.0.0-x64.dmg</b> · ~25 MB</li>
+              <li><b>Spectra-1.0.0-x64.dmg</b> · ~106 MB</li>
               <li>v1.0.0 · macOS 12 Monterey or later</li>
               <li>First launch: right-click → Open (notarization coming) · full feature parity with Apple Silicon</li>
             </ul>
@@ -147,7 +147,7 @@
         <ul class="tick-list reveal">
           <li><b>macOS 12 Monterey or later</b> — Monterey, Ventura, Sonoma, Sequoia and newer</li>
           <li><b>Apple Silicon or Intel</b> — native builds for both; no Rosetta required</li>
-          <li><b>About 60 MB of disk space</b> — ironic, we know; Spectra earns it back quickly</li>
+          <li><b>About 105 MB to download</b> — ironic, we know; Spectra earns it back quickly</li>
           <li><b>Full Disk Access</b> (optional but recommended) — lets the X-Ray see everything; granted once in System Settings</li>
           <li><b>No internet connection needed</b> — Spectra works fully offline, by design</li>
         </ul>
@@ -159,14 +159,14 @@
       <div class="container">
         <div class="sha-block panel reveal">
           <h3>Verify your download — SHA-256</h3>
-          <p class="sha-intro">Paranoia is a feature. After downloading, run <code>shasum -a 256 ~/Downloads/Spectra-1.0.0-*.dmg</code> in Terminal and compare. Final checksums are published here with each release.</p>
+          <p class="sha-intro">Paranoia is a feature. After downloading, run <code>shasum -a 256 ~/Downloads/Spectra-1.0.0-*.dmg</code> in Terminal and compare it against the checksum published alongside the installer on the <a href="https://github.com/prashant1998gupta/spectra/releases/tag/v1.0.0">v1.0.0 release page</a> — every build is checksummed there when it ships.</p>
           <div class="sha-row">
             <span class="file">Spectra-1.0.0-arm64.dmg</span>
-            <code>0000000000000000000000000000000000000000000000000000000000000000 — published at release</code>
+            <code>published on the release page</code>
           </div>
           <div class="sha-row">
             <span class="file">Spectra-1.0.0-x64.dmg</span>
-            <code>0000000000000000000000000000000000000000000000000000000000000000 — published at release</code>
+            <code>published on the release page</code>
           </div>
         </div>
       </div>
@@ -177,7 +177,7 @@
       <div class="container">
         <aside class="demo-note panel">
           <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span>
-          <p><b>On Windows or Linux?</b> Spectra's core engine is cross-platform — desktop builds for other systems are on the roadmap. For now, Spectra is crafted for the Mac, and the browser demo mode works anywhere if you'd like a look around.</p>
+          <p><b>On Windows or Linux?</b> Spectra is crafted for the Mac — that is the version we test, support and stand behind. The engine is cross-platform, so an <b>unsupported Windows build</b> is attached to each <a href="https://github.com/prashant1998gupta/spectra/releases/tag/v1.0.0">release</a> for the curious; it is a developer preview, not a product, and macOS-specific features do not apply. Linux has no build. The browser demo works anywhere if you would just like a look around.</p>
         </aside>
       </div>
     </section>
@@ -189,7 +189,7 @@
           <h2>Your disk has <span class="grad-text">stories to tell.</span></h2>
           <p>Download free, scan in under a minute, and see your Mac in full spectrum.</p>
           <div class="hero-ctas">
-            <a class="btn btn-lg js-download" href="https://github.com/prashant1998gupta/spectra/releases/download/v1.0.0/Spectra-1.0.0-arm64.dmg" data-live>Download free · Apple Silicon</a>
+            <a class="btn btn-lg js-download" href="https://github.com/prashant1998gupta/spectra/releases/download/v1.0.0/Spectra-1.0.0-arm64.dmg">Download free · Apple Silicon</a>
             <a class="btn-ghost btn-lg" href="pricing.html">See pricing</a>
           </div>
           <span class="btn-note">v1.0.0 · macOS 12 Monterey or later · Universal for Apple Silicon &amp; Intel</span>
@@ -233,6 +233,7 @@
             <li><a href="faq.html">FAQ</a></li>
             <li><a href="changelog.html">Changelog</a></li>
             <li><a href="docs.html">Docs</a></li>
+            <li><a href="https://github.com/prashant1998gupta/spectra/issues">Contact support</a></li>
           </ul>
         </div>
         <div class="footer-col">
