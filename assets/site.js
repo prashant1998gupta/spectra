@@ -17,6 +17,7 @@
     initBuyButtons();
     initYear();
     initSmoothAnchors();
+    initCopyButtons();
   });
 
   /* ----------------------------------------------------------------------
@@ -180,6 +181,41 @@
         block: "start"
       });
       if (history.pushState) history.pushState(null, "", id);
+    });
+  }
+
+  // Copy buttons ([data-copy]) — e.g. the Gatekeeper xattr command.
+  function initCopyButtons() {
+    document.querySelectorAll("[data-copy]").forEach(function (btn) {
+      var label = btn.textContent;
+      btn.addEventListener("click", function () {
+        var text = btn.getAttribute("data-copy");
+        function done() {
+          btn.textContent = "Copied ✓";
+          btn.classList.add("is-copied");
+          setTimeout(function () {
+            btn.textContent = label;
+            btn.classList.remove("is-copied");
+          }, 1600);
+        }
+        function fallback() {
+          var ta = document.createElement("textarea");
+          ta.value = text;
+          ta.setAttribute("readonly", "");
+          ta.style.position = "fixed";
+          ta.style.opacity = "0";
+          document.body.appendChild(ta);
+          ta.select();
+          try { document.execCommand("copy"); } catch (e) { /* nothing left to try */ }
+          document.body.removeChild(ta);
+          done();
+        }
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(done, fallback);
+        } else {
+          fallback();
+        }
+      });
     });
   }
 })();

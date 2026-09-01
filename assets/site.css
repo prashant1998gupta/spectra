@@ -1940,6 +1940,129 @@ html.js .reveal:nth-child(4) { transition-delay: 0.18s; }
   word-break: break-all;
 }
 
+/* First-launch Gatekeeper note (download page) — remove with notarization */
+.gk-note {
+  max-width: 780px;
+  margin: 1.6rem auto 0;
+  padding: 1.4rem 1.6rem 1.25rem;
+  border-left: 3px solid var(--warn);
+}
+
+.gk-head {
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+}
+
+.gk-icon {
+  width: 21px;
+  height: 21px;
+  flex: none;
+  color: var(--warn);
+  margin-top: 0.1rem;
+}
+
+.gk-note h3 {
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.gk-sub {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.gk-steps {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.gk-steps li {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  font-size: 0.88rem;
+  color: var(--text);
+}
+
+.gk-steps li > div { flex: 1; min-width: 0; }
+
+.gk-num {
+  flex: none;
+  width: 1.35rem;
+  height: 1.35rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--warn);
+  border: 1px solid rgba(251, 191, 36, 0.45);
+  background: rgba(251, 191, 36, 0.08);
+  margin-top: 0.05rem;
+}
+
+.gk-cmd {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.55rem;
+  padding: 0.6rem 0.6rem 0.6rem 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.gk-cmd code {
+  flex: 1;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: 0.82rem;
+  color: var(--cyan);
+  overflow-wrap: anywhere;
+}
+
+.gk-copy {
+  flex: none;
+  font-family: var(--font-text);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text);
+  padding: 0.35rem 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--glass);
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease, color 0.15s ease;
+}
+
+.gk-copy:hover {
+  border-color: rgba(34, 211, 238, 0.5);
+  background: var(--glass-strong);
+}
+
+.gk-copy.is-copied {
+  color: var(--ok);
+  border-color: rgba(52, 211, 153, 0.5);
+}
+
+.gk-foot {
+  margin-top: 1rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.78rem;
+  color: var(--faint);
+}
+
+@media (max-width: 560px) {
+  .gk-cmd { flex-wrap: wrap; }
+  .gk-cmd code { flex-basis: 100%; }
+}
+
 /* Tick list (requirements etc.) */
 .tick-list {
   max-width: 620px;

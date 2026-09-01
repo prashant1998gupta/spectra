@@ -108,12 +108,32 @@
 
         <p class="dl-detect" data-detect>Not sure which chip you have? Open <b>&#63743; menu → About This Mac</b> — "Chip: Apple M…" means Apple Silicon.</p>
 
-        <div class="sha-block panel reveal" id="damaged">
-          <h3>macOS says Spectra "is damaged"? It isn't.</h3>
-          <p>Spectra isn't code-signed yet (an Apple Developer certificate is on the roadmap), and today's macOS reports <em>any</em> unsigned download as "damaged and can't be opened" — it offers the Bin instead of asking politely. Your download is fine, and you can prove it with the checksum below. After dragging Spectra into Applications, run this one line in Terminal, then open the app normally:</p>
-          <p><code>xattr -cr /Applications/Spectra.app</code></p>
-          <p>That clears the quarantine flag on Spectra alone — it touches nothing else and you'll never need it again for this copy. Signed, notarized builds will make this step disappear entirely.</p>
-        </div>
+        <aside class="gk-note panel reveal" id="damaged" aria-labelledby="gk-title">
+          <div class="gk-head">
+            <svg class="gk-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 3 22 20H2Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+              <path d="M12 10v4.4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+              <circle cx="12" cy="17.2" r="1.05" fill="currentColor"/>
+            </svg>
+            <div>
+              <h3 id="gk-title">macOS will call Spectra “damaged.” It isn’t.</h3>
+              <p class="gk-sub">Spectra isn’t Apple-notarized yet, so macOS quarantines the download and shows its scariest dialog. Ten seconds fixes it — once, ever:</p>
+            </div>
+          </div>
+          <ol class="gk-steps">
+            <li><span class="gk-num">1</span><div>Drag <b>Spectra</b> into <b>Applications</b> as usual.</div></li>
+            <li><span class="gk-num">2</span>
+              <div>Paste this into <b>Terminal</b> and press Return:
+                <div class="gk-cmd">
+                  <code>xattr -cr /Applications/Spectra.app</code>
+                  <button class="gk-copy" type="button" data-copy="xattr -cr /Applications/Spectra.app">Copy</button>
+                </div>
+              </div>
+            </li>
+            <li><span class="gk-num">3</span><div>Open Spectra normally — the warning never comes back.</div></li>
+          </ol>
+          <p class="gk-foot">Skeptical? Good — verify the checksum below for cryptographic proof your download is exactly what we built. Signed &amp; notarized builds are on the roadmap and will remove this step entirely.</p>
+        </aside>
       </div>
     </section>
 
