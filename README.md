@@ -13,13 +13,13 @@ Everything runs 100% on your Mac — no account, no telemetry, no network depend
 
 | Platform | Download |
 |---|---|
-| macOS · Apple Silicon (M1–M4) | [Spectra-1.0.0-arm64.dmg](https://github.com/prashant1998gupta/spectra/releases/download/v1.0.0/Spectra-1.0.0-arm64.dmg) |
-| macOS · Intel | [Spectra-1.0.0-x64.dmg](https://github.com/prashant1998gupta/spectra/releases/download/v1.0.0/Spectra-1.0.0-x64.dmg) |
-| Windows | [Spectra-Setup-1.0.0.exe](https://github.com/prashant1998gupta/spectra/releases/download/v1.0.0/Spectra-Setup-1.0.0.exe) |
+| macOS · Apple Silicon (M1–M4) | [Spectra-1.1.0-arm64.dmg](https://github.com/prashant1998gupta/spectra/releases/download/v1.1.0/Spectra-1.1.0-arm64.dmg) |
+| macOS · Intel | [Spectra-1.1.0-x64.dmg](https://github.com/prashant1998gupta/spectra/releases/download/v1.1.0/Spectra-1.1.0-x64.dmg) |
+| Windows | [Spectra-Setup-1.1.0.exe](https://github.com/prashant1998gupta/spectra/releases/download/v1.1.0/Spectra-Setup-1.1.0.exe) |
 
 All versions: [Releases](https://github.com/prashant1998gupta/spectra/releases)
 
-*First launch on macOS: the app is not yet notarized — right-click → Open, or approve it in System Settings → Privacy & Security.*
+*First launch on macOS: the app is not yet notarized, so macOS calls the download "damaged" — it isn't. After dragging Spectra into Applications, run `xattr -cr /Applications/Spectra.app` in Terminal once, then open it normally. How to verify your download by checksum: see the [release notes](https://github.com/prashant1998gupta/spectra/releases/latest).*
 
 </div>
 
