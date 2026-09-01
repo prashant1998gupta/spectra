@@ -76,6 +76,55 @@
       <div class="container">
         <div class="timeline">
 
+          <!-- v1.1 Prism — BUILT, NOT RELEASED. When the tag ships, swap
+               .is-next for the gradient chip and put the real date in. -->
+          <article class="tl-entry reveal" id="v1-1-0">
+            <div class="tl-head">
+              <span class="version-chip is-next">v1.1</span>
+              <time class="tl-date">In development · try it now in the demo</time>
+            </div>
+            <h2 class="tl-name">“Prism” — the intelligence layer</h2>
+            <div class="tl-body panel">
+              <p class="tl-unreleased">
+                <b>Not in the download yet.</b> All ten features below are finished and fully usable in
+                <a href="demo/">the live browser demo</a> today. They ship in the desktop app with v1.1 —
+                the current download is v1.0.0. We list them here rather than quietly implying the
+                installer already has them.
+              </p>
+              <div class="tl-group">
+                <span class="tl-tag tl-tag--new">New</span>
+                <ul>
+                  <li><b>Insights</b> — a storage health score built from five weighted factors, each showing its own sub-score and the sentence behind it. No unexplained numbers.</li>
+                  <li><b>Storage Forecast</b> — predicts when a drive actually fills up, using a median-of-slopes fit so one big install or delete cannot skew the date.</li>
+                  <li><b>What Changed</b> — diff two scans. Each folder is credited with its own growth rather than its children’s, so you get the culprit instead of a stack of parent directories.</li>
+                  <li><b>Restore Center</b> — every removal recorded (what, from where, how big, which screen asked) and put back from the Trash in one click.</li>
+                  <li><b>App Footprint</b> — what an app really occupies: the bundle plus every cache, container, support folder and log it scattered across your Library.</li>
+                  <li><b>System Data</b> — the Mac storage mystery itemised: snapshots, purgeable space, the sleep image, swap and evicted iCloud files, each marked reclaimable or system-managed.</li>
+                  <li><b>Project Radar</b> — dev projects ranked by <i>git</i> staleness rather than file dates, with the command that regenerates every artifact it offers to remove.</li>
+                  <li><b>File Provenance</b> — the download URL and the app that fetched it, read from the metadata macOS has kept all along.</li>
+                  <li><b>Space Rules</b> — your own thresholds, checked on the maintenance schedule. Rules only notify; nothing acts without you.</li>
+                  <li><b>Archive &amp; Offload</b> — compress a folder to a single archive, optionally on another drive. The archive is read back and verified <i>before</i> the original moves to the Trash.</li>
+                </ul>
+              </div>
+              <div class="tl-group">
+                <span class="tl-tag tl-tag--improved">Improved</span>
+                <ul>
+                  <li>The <b>live browser demo</b> is now published at <a href="demo/">/demo/</a> — previously the “try the demo” button only scrolled to a paragraph describing one.</li>
+                  <li>Every deletion across the whole app now records its origin, so Restore Center can name the screen that asked for it.</li>
+                  <li>Scheduled maintenance evaluates your Space Rules; a rule you wrote yourself takes priority over the generic “junk is piling up” notification.</li>
+                </ul>
+              </div>
+              <div class="tl-group">
+                <span class="tl-tag tl-tag--fixed">Fixed</span>
+                <ul>
+                  <li>Scan-diff attribution lost the filesystem root: the parent of <code>/Users</code> resolved to nothing rather than <code>/</code>, so a scan of the whole disk reported the root as one giant change echoing everything beneath it.</li>
+                  <li>Corrected “Universal” throughout the site — Spectra ships two native builds, one per chip, which is exactly why the download page asks you to pick one.</li>
+                  <li>Installer sizes now quoted in decimal MB, matching what Finder shows for the file you actually downloaded.</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
           <!-- v1.0.0 Aurora -->
           <article class="tl-entry reveal" id="v1-0-0">
             <div class="tl-head">

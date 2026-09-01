@@ -1975,3 +1975,133 @@ html.js .reveal:nth-child(4) { transition-delay: 0.18s; }
 @media (max-width: 480px) {
   .steps--3 { grid-template-columns: 1fr; }
 }
+
+/* -------------------------------------------------------------------------
+   28. The Pro intelligence section (index #intelligence) + its compare rows
+   Tokens only — no new colours, so every future theme keeps working.
+   ------------------------------------------------------------------------- */
+
+.intel-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px 20px;
+  margin-bottom: 26px;
+  border-color: rgba(124, 92, 255, 0.38);
+  background: linear-gradient(180deg, rgba(124, 92, 255, 0.09), rgba(124, 92, 255, 0.02));
+}
+.intel-banner p { margin: 0; font-size: 14.5px; line-height: 1.65; }
+.intel-badge {
+  flex-shrink: 0;
+  padding: 3px 11px;
+  border-radius: 999px;
+  font-size: 11.5px;
+  font-weight: 750;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--grad);
+  margin-top: 2px;
+}
+
+.intel-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(292px, 1fr));
+  gap: 14px;
+}
+.intel-card { position: relative; padding-top: 22px; }
+.intel-num {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  font-family: var(--font-display);
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--line);
+  pointer-events: none;
+}
+.intel-card h3 { font-size: 17px; margin-bottom: 3px; padding-right: 46px; }
+.intel-card .intel-tag {
+  font-size: 13px;
+  font-weight: 650;
+  margin-bottom: 9px;
+  background: var(--grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.intel-card p { font-size: 14px; line-height: 1.62; }
+.intel-foot {
+  margin-top: 22px;
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: var(--text-2);
+  max-width: 82ch;
+}
+
+/* The "questions nobody else answers" block inside the comparison table */
+.compare tr.cmp-divider th {
+  text-align: left;
+  padding-top: 22px;
+  font-size: 12px;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-2);
+  border-bottom-color: rgba(124, 92, 255, 0.4);
+}
+.cmp-divider-note {
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 500;
+  color: var(--text-3);
+}
+.cmp-pro {
+  display: inline-block;
+  margin-left: 7px;
+  padding: 1px 7px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--violet);
+  border: 1px solid rgba(124, 92, 255, 0.42);
+  background: rgba(124, 92, 255, 0.1);
+  vertical-align: middle;
+}
+
+@media (max-width: 640px) {
+  .intel-banner { flex-direction: column; gap: 10px; }
+  .intel-num { font-size: 24px; }
+}
+
+/* Sub-labels in the pricing feature table */
+.feat-sub {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-3);
+  margin-top: 2px;
+}
+
+/* An unreleased changelog entry: muted chip + an explicit "not yet" banner,
+   so a reader can never mistake it for something the installer already has. */
+.version-chip.is-next {
+  background: transparent;
+  color: var(--violet);
+  border: 1px dashed rgba(124, 92, 255, 0.55);
+}
+.tl-unreleased {
+  margin: 0 0 18px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: var(--text-2);
+  border: 1px solid rgba(124, 92, 255, 0.32);
+  background: rgba(124, 92, 255, 0.07);
+}

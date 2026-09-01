@@ -83,7 +83,20 @@
           <div class="faq-list">
             <details class="faq-item reveal">
               <summary>Do I need the Apple Silicon or the Intel download?</summary>
-              <div class="faq-a">If your Mac has an M-series chip (M1 or later, roughly 2020 onward), grab the Apple Silicon build; older Macs take the Intel build. Not sure? Open <b>&#63743; menu → About This Mac</b> — the "Chip" line says Apple M-something, the "Processor" line says Intel. Both builds are the same v1.0.0 app, natively compiled for each architecture, and the download page tries to detect the right one for you.</div>
+              <div class="faq-a">If your Mac has an M-series chip (M1 or later, roughly 2020 onward), grab the Apple Silicon build; older Macs take the Intel build. Not sure? Open <b>&#63743; menu → About This Mac</b> — the "Chip" line says Apple M-something, the "Processor" line says Intel. Both builds are the same v1.0.0 app, natively compiled for each architecture, and the download page tries to detect the right one for you.
+          <details class="faq-item">
+            <summary>Can I try it without downloading anything?</summary>
+            <div class="faq-a">Yes — <a href="demo/">the live demo</a> is the real Spectra interface running in your browser against a realistic simulated disk. It is the same React app that ships in the download, with a mock data layer instead of your files, so every view works including all ten Pro features. Nothing is scanned and nothing is uploaded; it is also how we test the UI.</div>
+          </details>
+          <details class="faq-item">
+            <summary>The site shows ten Pro features. Are they in the download?</summary>
+            <div class="faq-a">Not yet. Insights, What Changed, Restore Center, App Footprint, System Data, Project Radar, File Provenance, Space Rules, Archive &amp; Offload and the Health Score are finished and fully usable in <a href="demo/">the browser demo</a> today — they ship in the desktop app in <b>v1.1</b>. Today’s download is v1.0.0. We would rather say that plainly than let a download page imply something it cannot deliver.</div>
+          </details>
+          <details class="faq-item">
+            <summary>If Spectra deletes something I needed, can I get it back?</summary>
+            <div class="faq-a">Yes, twice over. Every deletion goes to the macOS Trash rather than being erased — the single exception is emptying the Trash itself, which is permanent by definition. On top of that, Restore Center records every removal Spectra makes (what, from where, how big, and which screen asked) and puts any of it back in one click. Where it <i>cannot</i> restore — an emptied Trash, or Windows’ Recycle Bin, which only Explorer can restore from — it says so up front instead of failing when you need it.</div>
+          </details>
+</div>
             </details>
             <details class="faq-item reveal">
               <summary>Which versions of macOS does Spectra support?</summary>

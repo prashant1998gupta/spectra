@@ -71,7 +71,7 @@
 
         <div class="hero-ctas">
           <a class="btn btn-lg js-download" href="https://github.com/prashant1998gupta/spectra/releases/download/v1.0.0/Spectra-1.0.0-arm64.dmg" data-live>Download free · Apple Silicon</a>
-          <a class="btn-ghost btn-lg" href="#demo-note">Try the live demo</a>
+          <a class="btn-ghost btn-lg" href="demo/">Try all 10 Pro features live →</a>
         </div>
         <span class="btn-note">Free · v1.0.0 · macOS 12 Monterey or later · Separate builds for Apple Silicon &amp; Intel</span>
 
@@ -420,6 +420,94 @@
     </section>
 
     <!-- ================= 7. COMPARISON ================= -->
+    <section class="section" id="intelligence">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <span class="eyebrow">Spectra Pro</span>
+          <h2>Every disk tool tells you <span class="grad-text">what is big.</span></h2>
+          <p>Only Spectra tells you what <i>changed</i>, when you actually run out, what that app really cost you — and lets you undo it.</p>
+        </div>
+
+        <div class="intel-banner panel reveal">
+          <span class="intel-badge">New</span>
+          <p>
+            All ten are finished and running in <a href="demo/"><b>the live browser demo</b></a> right now — no download, no account.
+            They ship in the desktop app in <b>v1.1</b>; today’s download is v1.0.0.
+            <a href="changelog.html">See what is in each release →</a>
+          </p>
+        </div>
+
+        <div class="intel-grid">
+            <article class="card intel-card reveal">
+              <span class="intel-num">01</span>
+              <h3>Storage Forecast</h3>
+              <p class="intel-tag">When this drive actually fills up</p>
+              <p>A robust trend fit over months of snapshots, so one big install cannot skew it. "At this rate, Macintosh HD runs out around November 3rd."</p>
+            </article>
+            <article class="card intel-card reveal">
+              <span class="intel-num">02</span>
+              <h3>What Changed</h3>
+              <p class="intel-tag">Which folders grew since last week</p>
+              <p>Diff two scans. Each folder is credited with its own growth, never its children’s — so you get the culprit, not a stack of parent directories saying the same thing.</p>
+            </article>
+            <article class="card intel-card reveal">
+              <span class="intel-num">03</span>
+              <h3>Restore Center</h3>
+              <p class="intel-tag">Undo any clean, from the Trash</p>
+              <p>Every removal is written down: what, from where, how big, which screen asked. One click puts it back. The feature that earns the right to delete anything.</p>
+            </article>
+            <article class="card intel-card reveal">
+              <span class="intel-num">04</span>
+              <h3>App Footprint</h3>
+              <p class="intel-tag">What an app really costs you</p>
+              <p>Finder shows a 400&nbsp;MB app. Spectra adds every cache, container and support folder it scattered across your Library and shows the real number.</p>
+            </article>
+            <article class="card intel-card reveal">
+              <span class="intel-num">05</span>
+              <h3>System Data</h3>
+              <p class="intel-tag">That 148&nbsp;GB, finally itemised</p>
+              <p>Snapshots, purgeable space, the sleep image, swap, evicted iCloud files — named, measured and marked reclaimable or system-managed. Never estimated.</p>
+            </article>
+            <article class="card intel-card reveal">
+              <span class="intel-num">06</span>
+              <h3>Project Radar</h3>
+              <p class="intel-tag">The repos you abandoned</p>
+              <p>Groups build output by project and ranks it by <i>git</i> staleness, not file dates. A build touches every file in a project you quit two years ago; your last commit does not.</p>
+            </article>
+            <article class="card intel-card reveal">
+              <span class="intel-num">07</span>
+              <h3>File Provenance</h3>
+              <p class="intel-tag">Where did this file come from?</p>
+              <p>macOS has recorded the download URL and the app that fetched it all along. Spectra just shows you — turning "delete this?" from a gamble into a decision.</p>
+            </article>
+            <article class="card intel-card reveal">
+              <span class="intel-num">08</span>
+              <h3>Space Rules</h3>
+              <p class="intel-tag">Your thresholds, not ours</p>
+              <p>Write the rule: "tell me when Downloads passes 5&nbsp;GB". Checked on the maintenance schedule. Rules only ever notify — nothing acts without you.</p>
+            </article>
+            <article class="card intel-card reveal">
+              <span class="intel-num">09</span>
+              <h3>Archive &amp; Offload</h3>
+              <p class="intel-tag">Reclaim it without losing it</p>
+              <p>Compress a folder to one archive, optionally on another drive. The archive is read back and verified <i>before</i> the original is moved to the Trash. Never before.</p>
+            </article>
+            <article class="card intel-card reveal">
+              <span class="intel-num">10</span>
+              <h3>Health Score</h3>
+              <p class="intel-tag">What to fix first</p>
+              <p>Five weighted factors into one number — and every factor shows its own score and the sentence behind it. A score you cannot interrogate is just a scare metric.</p>
+            </article>
+        </div>
+
+        <p class="intel-foot">
+          Built because no competitor answers these questions. The engineering behind each one —
+          including why the forecast uses a median-of-slopes fit and why the archiver verifies before it deletes —
+          is written up in <a href="docs.html#intelligence">the documentation</a>.
+        </p>
+      </div>
+    </section>
+
     <section class="section" id="compare">
       <div class="container">
         <div class="section-head section-head--center">
@@ -503,10 +591,83 @@
                 <td><span class="mark-no">—</span></td>
                 <td><span class="mark-yes">✓</span></td>
               </tr>
+              <tr class="cmp-divider">
+                <th scope="row" colspan="5">The questions nobody else answers <span class="cmp-divider-note">— <a href="demo/">try them live</a>, shipping in v1.1</span></th>
+              </tr>
+              <tr>
+                <th scope="row">Predicts when the disk fills up <span class="cmp-pro">Pro</span></th>
+                <td class="col-spectra"><span class="mark-yes">✓</span></td>
+                <td><span class="mark-no">✗</span></td>
+                <td><span class="mark-no">✗</span></td>
+                <td><span class="mark-no">✗</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Diffs two scans — "what grew since last week?" <span class="cmp-pro">Pro</span></th>
+                <td class="col-spectra"><span class="mark-yes">✓</span></td>
+                <td><span class="mark-no">✗</span></td>
+                <td><span class="mark-no">✗</span></td>
+                <td><span class="mark-no">✗</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Undo history for every deletion <span class="cmp-pro">Pro</span></th>
+                <td class="col-spectra"><span class="mark-yes">✓</span></td>
+                <td><span class="mark-no">✗</span></td>
+                <td><span class="mark-no">✗</span></td>
+                <td><span class="mark-no">✗</span></td>
+              </tr>
+              <tr>
+                <th scope="row">An app's true cost, bundle&nbsp;+&nbsp;scattered files <span class="cmp-pro">Pro</span></th>
+                <td class="col-spectra"><span class="mark-yes">✓</span></td>
+                <td><span class="mark-no">✗</span></td>
+                <td><span class="mark-no">✗</span></td>
+                <td><span class="mark-no">✗</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Explains macOS "System&nbsp;Data" <span class="cmp-pro">Pro</span></th>
+                <td class="col-spectra"><span class="mark-yes">✓</span></td>
+                <td><span class="mark-no">✗</span></td>
+                <td><span class="mark-no">partly</span></td>
+                <td><span class="mark-no">✗</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Dev projects ranked by git staleness <span class="cmp-pro">Pro</span></th>
+                <td class="col-spectra"><span class="mark-yes">✓</span></td>
+                <td><span class="mark-no">✗</span></td>
+                <td><span class="mark-no">✗</span></td>
+                <td><span class="mark-no">✗</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Shows where a file was downloaded from <span class="cmp-pro">Pro</span></th>
+                <td class="col-spectra"><span class="mark-yes">✓</span></td>
+                <td><span class="mark-no">✗</span></td>
+                <td><span class="mark-no">✗</span></td>
+                <td><span class="mark-no">partly</span></td>
+              </tr>
+              <tr>
+                <th scope="row">User-defined space rules &amp; alerts <span class="cmp-pro">Pro</span></th>
+                <td class="col-spectra"><span class="mark-yes">✓</span></td>
+                <td><span class="mark-no">✗</span></td>
+                <td><span class="mark-no">✗</span></td>
+                <td><span class="mark-no">✗</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Archive instead of delete (verified) <span class="cmp-pro">Pro</span></th>
+                <td class="col-spectra"><span class="mark-yes">✓</span></td>
+                <td><span class="mark-no">✗</span></td>
+                <td><span class="mark-no">✗</span></td>
+                <td><span class="mark-no">✗</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Explainable storage health score <span class="cmp-pro">Pro</span></th>
+                <td class="col-spectra"><span class="mark-yes">✓</span></td>
+                <td><span class="mark-no">✗</span></td>
+                <td><span class="mark-no">unexplained</span></td>
+                <td><span class="mark-no">✗</span></td>
+              </tr>
             </tbody>
           </table>
         </div>
-        <p class="compare-note">✓ built-in dedicated feature &nbsp;·&nbsp; ✗ not offered as a dedicated built-in feature &nbsp;·&nbsp; $ paid / paid separately &nbsp;·&nbsp; — varies or not publicly specified. Based on publicly available product information, August 2026; features and prices change — please verify with each vendor. All trademarks belong to their owners.</p>
+        <p class="compare-note">✓ built-in dedicated feature &nbsp;·&nbsp; ✗ not offered as a dedicated built-in feature &nbsp;·&nbsp; $ paid / paid separately &nbsp;·&nbsp; — varies or not publicly specified. Based on publicly available product information, August 2026; features and prices change — please verify with each vendor. All trademarks belong to their owners. The final ten rows are Spectra Pro features: they are finished and fully usable in <a href="demo/">the browser demo</a> today, and ship in the desktop app in v1.1 — the current download is v1.0.0.</p>
       </div>
     </section>
 
@@ -604,7 +765,7 @@
       <div class="container">
         <aside class="demo-note panel">
           <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><line x1="12" y1="10.5" x2="12" y2="16.5"/><circle cx="12" cy="7.5" r="0.4"/></svg></span>
-          <p><b>About the live demo.</b> Spectra ships with a built-in demo mode that runs right in your browser view of the app — a full, safe walkthrough on a realistic sample disk, so you can explore every feature before scanning a single real file. It's included in the free download; no separate install and nothing to sign up for.</p>
+          <p><b>About the live demo.</b> <a href="demo/">The demo at <code>/demo/</code></a> is the real Spectra interface running in your browser against a realistic simulated disk — the same React app that ships in the download, with a mock data layer instead of your files. Every view works, including all ten Pro features. Nothing is scanned, nothing is uploaded, and there is nothing to sign up for. It is also how we test the UI: any view that only works inside Electron is wired wrong.</p>
         </aside>
       </div>
     </section>
