@@ -1168,6 +1168,19 @@ p { text-wrap: pretty; }
   color: var(--muted);
 }
 
+/* Revealed by site.js only while GoatCounter is armed — see initAnalytics(). */
+.manifesto-note {
+  margin-top: 1.1rem;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.manifesto-note a {
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 @media (max-width: 720px) {
   .manifesto-points { grid-template-columns: 1fr; }
 }

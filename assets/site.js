@@ -18,7 +18,29 @@
     initYear();
     initSmoothAnchors();
     initCopyButtons();
+    initAnalytics();
   });
+
+  /* ----------------------------------------------------------------------
+     Site analytics: GoatCounter — page-view counting only, no cookies, no
+     personal data. Create a free account at goatcounter.com, then set the
+     site code below (e.g. "spectra" for spectra.goatcounter.com) to arm it.
+     Empty = nothing loads at all. Arming also reveals the disclosure note in
+     the privacy manifesto (#analytics-note), so the site only discloses
+     counting while it is actually counting. The app has no analytics, ever.
+     ---------------------------------------------------------------------- */
+  var SPECTRA_GOAT = "";
+
+  function initAnalytics() {
+    if (!SPECTRA_GOAT) return;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://gc.zgo.at/count.js";
+    s.setAttribute("data-goatcounter", "https://" + SPECTRA_GOAT + ".goatcounter.com/count");
+    document.head.appendChild(s);
+    var note = document.getElementById("analytics-note");
+    if (note) note.hidden = false;
+  }
 
   /* ----------------------------------------------------------------------
      Nav: glass-on-scroll + mobile hamburger
